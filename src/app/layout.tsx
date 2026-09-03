@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { generateWebsiteSchema, generateOrganizationSchema } from "@/lib/seo";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { ConstructionGate } from "@/components/ConstructionGate";
 
 export const metadata: Metadata = {
   title: "East Africa Wholesale Foods - Premium Quality Products",
@@ -99,7 +100,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider><ConstructionGate>{children}</ConstructionGate></ThemeProvider>
       </body>
     </html>
   );
