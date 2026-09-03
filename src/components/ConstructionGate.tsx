@@ -11,6 +11,7 @@ export function ConstructionGate({ children }: { children: React.ReactNode }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const configuredPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD?.trim();
 
   useEffect(() => {
     setUnlocked(sessionStorage.getItem(ACCESS_KEY) === "true");
@@ -35,12 +36,10 @@ export function ConstructionGate({ children }: { children: React.ReactNode }) {
     setIsSubmitting(true);
     setError("");
     try {
-      const response = await fetch("/api/admin/unlock", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: password.trim() }),
-      });
-      if (!response.ok) throw new Error("Incorrect password");
+      await new Promise((resolve) => setTimeout(resolve, 150));
+      if (!configuredPassword || password.trim() !== configuredPassword) {
+        throw new Error("Incorrect password");
+      }
       sessionStorage.setItem(ACCESS_KEY, "true");
       setUnlocked(true);
     } catch {
