@@ -8,6 +8,7 @@ import { fetchProducts } from "@/lib/api/products";
 import { Product } from "@/types/product";
 import { getProductSlug } from "@/lib/product-slugs";
 import { SiteHeader } from "@/components/SiteHeader";
+import { BrandSpinner } from "@/components/BrandSpinner";
 
 type SortOption = "name" | "rating" | "newest";
 
@@ -20,18 +21,22 @@ export default function ProductsPage() {
 
   useEffect(() => {
     const loadProducts = async () => {
+      const startedAt = Date.now();
       try {
         const data = await fetchProducts();
         setProducts(data);
       } catch (error) {
         console.error("Failed to load products:", error);
       } finally {
-        setIsLoading(false);
+        const remaining = Math.max(0, 1000 - (Date.now() - startedAt));
+        window.setTimeout(() => setIsLoading(false), remaining);
       }
     };
 
     loadProducts();
   }, []);
+
+  if (isLoading) return <BrandSpinner />;
 
   let filtered = products;
 
@@ -290,7 +295,7 @@ export default function ProductsPage() {
             </div>
           </div>
           <div className="border-t border-neutral-700 pt-8 text-center text-sm">
-            <p>&copy; 2024 East Africa Wholesale Foods. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} East Africa Wholesale Foods. All rights reserved.</p>
           </div>
         </div>
       </footer>

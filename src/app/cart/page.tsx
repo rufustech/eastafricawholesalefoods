@@ -217,7 +217,7 @@ export default function CartPage() {
       {/* Footer */}
       <footer className="bg-neutral-900 text-neutral-300 py-12 mt-12">
         <div className="container text-center text-sm">
-          <p>&copy; 2024 East Africa Wholesale Foods. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} East Africa Wholesale Foods. All rights reserved.</p>
         </div>
       </footer>
     </>

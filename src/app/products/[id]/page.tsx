@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactModal } from "@/components/ContactModal";
 import { SiteHeader } from "@/components/SiteHeader";
+import { BrandSpinner } from "@/components/BrandSpinner";
 import { RelatedProducts } from "@/components/products/RelatedProducts";
 import { ReviewsSection } from "@/components/products/ReviewsSection";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -21,19 +22,23 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
   useEffect(() => {
     let active = true;
+    const startedAt = Date.now();
     async function loadProduct() {
       try {
         const { id } = await params;
         const [productData, productsData] = await Promise.all([fetchProduct(id), fetchProducts()]);
         if (active) { setProduct(productData); setAllProducts(productsData); }
       } catch (error) { console.error("Failed to load product:", error); }
-      finally { if (active) setIsLoading(false); }
+      finally {
+        const remaining = Math.max(0, 1000 - (Date.now() - startedAt));
+        window.setTimeout(() => { if (active) setIsLoading(false); }, remaining);
+      }
     }
     loadProduct();
     return () => { active = false; };
   }, [params]);
 
-  if (isLoading) return <div className="grid min-h-screen place-items-center bg-[#fbf7ee] text-[#173b2b]">Loading product...</div>;
+  if (isLoading) return <BrandSpinner />;
   if (!product) return <div className="grid min-h-screen place-items-center bg-[#fbf7ee] px-6 text-center text-[#173b2b]"><div><p className="mb-3 text-xs font-bold uppercase tracking-widest text-[#d64b35]">Sorry</p><h1 className="font-serif text-4xl font-bold">Product not found</h1><p className="mt-3 opacity-70">This item may have been removed from the catalogue.</p><Link href="/products" className="mt-7 inline-flex rounded-full bg-[#1f633f] px-6 py-3 font-bold text-white">Back to products</Link></div></div>;
 
   const categoryName = product.category.replace("-", " ");

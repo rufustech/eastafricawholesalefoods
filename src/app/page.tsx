@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setShowIntro(false), 500);
+    const timer = window.setTimeout(() => setShowIntro(false), 1000);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -73,7 +73,7 @@ export default function Home() {
         <section id="story" className="container grid gap-10 py-20 md:grid-cols-2 md:items-center md:py-28"><div className="relative min-h-[360px] overflow-hidden rounded-[2rem] bg-[#d8e7c9] p-8 dark:bg-[#1c4030]"><div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-[#7da453]" /><div className="absolute -right-20 top-12 h-72 w-72 rounded-full border-[40px] border-[#d64b35]/80" /><div className="relative flex h-full flex-col justify-between"><span className="text-xs font-bold uppercase tracking-[0.25em] text-[#d64b35]">Our promise</span><p className="max-w-xs font-serif text-4xl font-bold leading-tight">The short route from source to service.</p><span className="text-sm font-semibold opacity-70">East Africa, one trusted supplier.</span></div></div><div><p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#d64b35]">Built for busy kitchens</p><h2 className="max-w-lg font-serif text-4xl font-bold leading-tight tracking-tight md:text-5xl">Your supplier should feel like part of the team.</h2><p className="mt-6 max-w-lg text-lg leading-8 opacity-70">We keep the ordering simple and the standards high, so restaurants, retailers, and food businesses can focus on serving their customers.</p><div className="mt-8 grid max-w-lg grid-cols-2 gap-5 border-t border-[#173b2b]/15 pt-6 dark:border-white/15"><div><p className="font-serif text-2xl font-bold">01</p><p className="mt-1 text-sm opacity-70">Consistent quality</p></div><div><p className="font-serif text-2xl font-bold">02</p><p className="mt-1 text-sm opacity-70">Transparent pricing</p></div></div></div></section>
       </main>
 
-      <footer className="bg-[#0f2a1d] py-10 text-[#f8f2e5]"><div className="container flex flex-col justify-between gap-6 sm:flex-row sm:items-center"><div><p className="font-serif text-xl font-bold">East Africa Wholesale Foods</p><p className="mt-1 text-sm text-[#b8d58e]">Good food starts with good sourcing.</p></div><p className="text-xs uppercase tracking-widest text-white/50">Copyright 2024 East Africa Wholesale Foods</p></div></footer>
+      <footer className="bg-[#0f2a1d] py-10 text-[#f8f2e5]"><div className="container flex flex-col justify-between gap-6 sm:flex-row sm:items-center"><div><p className="font-serif text-xl font-bold">East Africa Wholesale Foods</p><p className="mt-1 text-sm text-[#b8d58e]">Good food starts with good sourcing.</p></div><p className="text-xs uppercase tracking-widest text-white/50">Copyright {new Date().getFullYear()} East Africa Wholesale Foods</p></div></footer>
     </div>
   );
 }

@@ -311,7 +311,7 @@
   }
 
   .intro-overlay {
-    animation: intro-exit 180ms ease 320ms forwards;
+    animation: intro-exit 180ms ease 820ms forwards;
   }
 
   @keyframes intro-exit {
