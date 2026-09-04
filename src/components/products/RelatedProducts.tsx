@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Product } from "@/types/product";
 import { isOutOfStock, isLowStock } from "@/lib/products";
 import { getProductSlug } from "@/lib/product-slugs";
+import { ActionIcon } from "@/components/ActionIcon";
 
 interface RelatedProductsProps {
   currentProduct: Product;
@@ -81,7 +82,7 @@ export function RelatedProducts({
               )}
 
               <div className="mt-auto text-sm font-bold text-[#d64b35]">
-                Contact us for details -&gt;
+                <span className="inline-flex items-center gap-2">Contact us for details <ActionIcon className="h-4 w-4" /></span>
               </div>
             </Link>
           );

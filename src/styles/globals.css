@@ -302,6 +302,10 @@
     animation: spin 18s linear infinite;
   }
 
+  .animate-spin-counter {
+    animation: spin 10s linear infinite reverse;
+  }
+
   main > section:first-child > .container > div:first-child {
     animation: hero-rise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
@@ -436,6 +440,27 @@
 }
 
 /* Print styles */
+.group > div > div > span.grid.h-9.w-9,
+.group > div > span.grid.h-12.w-12 {
+  font-size: 0;
+}
+
+.group > div > div > span.grid.h-9.w-9::after,
+.group > div > span.grid.h-12.w-12::after {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.group:hover > div > div > span.grid.h-9.w-9::after,
+.group:hover > div > span.grid.h-12.w-12::after {
+  transform: translate(2px, -2px) rotate(45deg);
+}
+
 @media print {
   body {
     background-color: white;
