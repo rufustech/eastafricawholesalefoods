@@ -33,7 +33,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Ala Damiano Cassava Leaves",
     image: "ala_damiano_cassava_leaves.jpg",
-    category: "frozen-foods",
+    category: "frozen-vegetables",
     description:
       "Carefully prepared cassava leaves, ready for traditional recipes.",
     price: 5.99,
@@ -61,7 +61,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Cassava Flour",
     image: "cassava_flour.jpg",
-    category: "grains",
+    category: "flours-grains",
     description:
       "Fine cassava flour for baking, thickening, and traditional dishes.",
     price: 3.49,
@@ -90,7 +90,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Green Beans",
     image: "greenbeans.jpg",
-    category: "frozen-foods",
+    category: "frozen-vegetables",
     description: "Crisp green beans prepared for quick, convenient cooking.",
     price: 4.99,
     unit: "per pack",
@@ -99,7 +99,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Kinazi Cassava Flour",
     image: "kinazi_cassava_flour.jpg",
-    category: "grains",
+    category: "flours-grains",
     description:
       "Quality cassava flour with a smooth texture for home and professional kitchens.",
     price: 3.99,
@@ -118,7 +118,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Maganjo Maize Flour",
     image: "maganjo_maize_flour.jpg",
-    category: "grains",
+    category: "flours-grains",
     description:
       "Fine maize flour for ugali, porridge, baking, and family meals.",
     price: 2.99,
@@ -128,7 +128,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Millet Karo",
     image: "millet_karo.jpg",
-    category: "grains",
+    category: "flours-grains",
     description: "Wholesome millet staple with a naturally nutty flavour.",
     price: 4.49,
     unit: "per pack",
@@ -183,7 +183,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Sosoma",
     image: "sosoma1.jpg",
-    category: "grains",
+    category: "flours-grains",
     description: "A dependable East African staple for everyday cooking.",
     price: 4.49,
     unit: "per pack",
@@ -192,7 +192,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Tilapia Fish",
     image: "talapia_fish.jpg",
-    category: "frozen-foods",
+    category: "frozen-vegetables",
     description:
       "Quality tilapia prepared for convenient cooking and food service.",
     price: 14.99,
@@ -202,7 +202,7 @@ const catalog: ProductSeed[] = [
   {
     name: "Yellow Corn",
     image: "yellow_corn.jpg",
-    category: "grains",
+    category: "flours-grains",
     description: "Golden corn selected for consistent quality and flavour.",
     price: 3.49,
     unit: "per kg",
@@ -219,6 +219,7 @@ function slugify(name: string): string {
 
 export const products: Product[] = catalog.map((item, index) => ({
   id: slugify(item.name),
+  slug: slugify(item.name),
   name: item.name,
   description: item.description,
   category: item.category,

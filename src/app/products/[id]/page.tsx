@@ -206,7 +206,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   Inventory
                 </p>
                 <p className="text-sm font-semibold text-green-600 dark:text-green-400">
-                  {product.inventory}
+                  {typeof product.inventory === "string"
+                    ? product.inventory
+                    : `${product.inventory.available ?? 0} units available`}
                 </p>
               </div>
               {product.specs.storageCondition && (

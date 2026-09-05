@@ -1,6 +1,6 @@
 "use client";
 
-import { Product } from "@/types/product";
+import { Product, ProductInventory } from "@/types/product";
 
 interface QuantitySelectorProps {
   product: Product;
@@ -15,8 +15,14 @@ export function QuantitySelector({
   onChange,
   disabled = false,
 }: QuantitySelectorProps) {
-  const minOrder = product.inventory.minOrderQuantity;
-  const available = product.inventory.available;
+  // Handle both string and object inventory types
+  const isString = typeof product.inventory === "string";
+  const minOrder = isString
+    ? 1
+    : ((product.inventory as ProductInventory).minOrderQuantity ?? 1);
+  const available = isString
+    ? 999
+    : ((product.inventory as ProductInventory).available ?? 999);
   const isOutOfStock = available === 0;
 
   const handleDecrease = () => {

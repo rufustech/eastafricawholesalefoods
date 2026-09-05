@@ -300,7 +300,9 @@ export default function ProductsPage() {
                               className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
                               aria-label="Product inventory status"
                             >
-                              {product.inventory}
+                              {typeof product.inventory === "string"
+                                ? product.inventory
+                                : `${product.inventory.available ?? 0} units`}
                             </span>
                           </div>
                         </div>

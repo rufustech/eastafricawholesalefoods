@@ -11,6 +11,9 @@
 import { Product } from "@/types/product";
 import productsData from "@/data/products.json" assert { type: "json" };
 
+// Cast JSON data to Product[] once at import
+const mockProducts = productsData.data as Product[];
+
 /**
  * Fetch all products
  * Mock implementation using JSON data - will switch to real API when backend ready
@@ -29,10 +32,10 @@ export async function fetchProducts(): Promise<Product[]> {
     // const result = await response.json();
     // return result.data || [];
 
-    return productsData.data || [];
+    return mockProducts || [];
   } catch (error) {
     console.error("Failed to fetch products:", error);
-    return productsData.data || [];
+    return mockProducts || [];
   }
 }
 
@@ -54,7 +57,7 @@ export async function fetchProduct(slug: string): Promise<Product | null> {
     // const result = await response.json();
     // return result.data || null;
 
-    const product = productsData.data?.find((p) => p.slug === slug);
+    const product = mockProducts.find((p) => p.slug === slug);
     return product || null;
   } catch (error) {
     console.error("Failed to fetch product:", error);
@@ -101,7 +104,7 @@ export async function fetchProductsByCategory(
     // return data.data || [];
 
     // For now, filter mock data
-    return (productsData.data || []).filter((p) => p.category === category);
+    return mockProducts.filter((p) => p.category === category);
   } catch (error) {
     console.error(`Failed to fetch products for category ${category}:`, error);
     return [];

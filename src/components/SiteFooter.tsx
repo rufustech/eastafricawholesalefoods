@@ -49,9 +49,6 @@ export function SiteFooter() {
               <li>
                 <a
                   href="mailto:info@eastafricawholesalefoods.com"
-                  href="mailto:info@eastafricawholesalefoods.com"
-                  href="mailto:info@eastafricawholesalefoods.com"
-
                   className={linkClass}
                 >
                   Contact

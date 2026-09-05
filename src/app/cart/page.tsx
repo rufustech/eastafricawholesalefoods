@@ -127,15 +127,16 @@ export default function CartPage() {
                       <div className="text-right">
                         <div className="text-sm text-neutral-600 mb-1">
                           {formatPrice(
-                            item.product.pricing.retail.amount,
-                            item.product.pricing.retail.currency,
+                            item.product.pricing?.retail.amount ?? 0,
+                            item.product.pricing?.retail.currency ?? "USD",
                           )}{" "}
                           each
                         </div>
                         <div className="text-lg font-bold text-primary-600">
                           {formatPrice(
-                            item.product.pricing.retail.amount * item.quantity,
-                            item.product.pricing.retail.currency,
+                            (item.product.pricing?.retail.amount ?? 0) *
+                              item.quantity,
+                            item.product.pricing?.retail.currency ?? "USD",
                           )}
                         </div>
                       </div>
@@ -217,7 +218,10 @@ export default function CartPage() {
       {/* Footer */}
       <footer className="bg-neutral-900 text-neutral-300 py-12 mt-12">
         <div className="container text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} East Africa Wholesale Foods. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} East Africa Wholesale Foods. All
+            rights reserved.
+          </p>
         </div>
       </footer>
     </>

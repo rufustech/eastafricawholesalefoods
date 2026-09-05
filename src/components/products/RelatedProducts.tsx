@@ -73,7 +73,9 @@ export function RelatedProducts({ products, limit = 4 }: RelatedProductsProps) {
               {/* Inventory Badge */}
               <div className="inline-flex">
                 <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
-                  {product.inventory}
+                  {typeof product.inventory === "string"
+                    ? product.inventory
+                    : `${product.inventory.available ?? 0} units`}
                 </span>
               </div>
             </div>

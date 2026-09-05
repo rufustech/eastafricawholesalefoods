@@ -9,6 +9,7 @@ export type ProductCategory =
   | "rice-cereals"
   | "dry-goods"
   | "spices"
+  | "spices-seasonings"
   | "condiments"
   | "oils-fats"
   | "fresh-produce"
@@ -36,6 +37,29 @@ export interface ProductSpecs {
   origin?: string;
   storageCondition?: string;
   certification?: string[];
+  expiryDate?: string;
+}
+
+export interface ProductPricing {
+  retail: {
+    amount: number;
+    currency: string;
+    unit: string;
+  };
+  wholesale?: {
+    amount: number;
+    currency: string;
+    unit: string;
+  };
+}
+
+export interface ProductInventory {
+  available?: number;
+  reserved?: number;
+  minOrderQuantity?: number;
+  maxOrderQuantity?: number;
+  reorderLevel?: number;
+  status?: string;
 }
 
 export interface Product {
@@ -45,9 +69,10 @@ export interface Product {
   description: string;
   category: ProductCategory;
   images: ProductImage[];
+  pricing?: ProductPricing;
   rating?: number;
   reviews?: number;
-  inventory: string; // e.g., "In Inventory"
+  inventory: string | ProductInventory;
   specs: ProductSpecs;
   createdAt: string;
   updatedAt: string;

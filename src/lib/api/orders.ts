@@ -57,7 +57,8 @@ export async function createOrder(
 
     // For now, return mock success
     const subtotal = orderData.items.reduce((sum, item) => {
-      return sum + item.product.pricing.retail.amount * item.quantity;
+      const price = item.product.pricing?.retail.amount ?? 0;
+      return sum + price * item.quantity;
     }, 0);
     const tax = subtotal * orderData.taxRate;
     const total = subtotal + tax;
