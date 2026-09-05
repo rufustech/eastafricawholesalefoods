@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { MobileMenu } from "@/components/MobileMenu";
 
 export function SiteHeader() {
   return (
@@ -63,6 +64,7 @@ export function SiteHeader() {
             Shop wholesale
           </Link>
           <ThemeToggle />
+          <MobileMenu />
         </div>
       </div>
     </header>
