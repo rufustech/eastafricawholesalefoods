@@ -57,7 +57,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
   if (!product) {
     return (
-      <div className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] flex items-center justify-center px-4">
+      <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400">
             Not Found
@@ -85,7 +85,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] text-neutral-900 dark:text-neutral-100">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
       <StructuredData schema={generateProductSchema(product)} />
       <SiteHeader />
 
@@ -122,11 +122,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         <section className="grid gap-10 lg:grid-cols-2 lg:gap-16 mb-16">
           {/* Product Image Gallery */}
           <div className="flex flex-col gap-4">
-            <div className="relative w-full aspect-4/3 bg-linear-to-br from-[#d8e7c9] via-[#e5efd9] to-[#d64b35]/20 dark:from-[#1c4030] dark:via-[#2a5a47] dark:to-[#8b3a2c]/30 rounded-3xl overflow-hidden shadow-2xl border border-[#d8e7c9]/30 dark:border-[#7da453]/20">
-              {/* Decorative circles */}
-              <div className="absolute -right-24 -top-24 w-56 h-56 rounded-full border-8 border-[#7da453]/20 dark:border-[#7da453]/10" />
-              <div className="absolute -left-16 -bottom-16 w-48 h-48 rounded-full border-8 border-[#d64b35]/20 dark:border-[#d64b35]/10" />
-
+            <div className="relative w-full aspect-4/3 bg-neutral-200 dark:bg-neutral-800 rounded-lg overflow-hidden">
               <Image
                 src={
                   product.images[0]?.url || "/eastafricawholesalefoodsLogo.png"
@@ -135,19 +131,14 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 fill
                 sizes="(max-width: 1024px) 90vw, 45vw"
                 priority
-                className="object-contain p-8 relative z-10"
+                className="object-contain p-4"
               />
-
-              {/* Stock Badge */}
-              <div className="absolute bottom-6 right-6 z-20 bg-[#1f633f] dark:bg-green-700 text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
-                In Stock
-              </div>
             </div>
           </div>
 
           {/* Product Details */}
           <div className="flex flex-col justify-start">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#d64b35] dark:text-[#ff6b5b] mb-2">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-2">
               {categoryName}
             </p>
 
@@ -160,7 +151,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
               <div className="flex items-center gap-3 mb-6">
                 <div className="flex items-center">
                   <span
-                    className="text-[#d64b35] dark:text-[#ff6b5b] text-xl font-bold"
+                    className="text-primary-600 dark:text-primary-400 text-lg"
                     aria-label={`Rating: ${product.rating} out of 5 stars`}
                   >
                     {"★".repeat(Math.round(product.rating))}
@@ -177,19 +168,6 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             <p className="text-lg text-neutral-700 dark:text-neutral-300 mb-6 leading-relaxed">
               {product.description}
             </p>
-
-            {/* Wholesale Availability Section */}
-            <div className="rounded-2xl bg-[#e5efd9] dark:bg-[#1c4030] p-6 mb-6 border-l-4 border-[#1f633f] dark:border-[#7da453]">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#d64b35] dark:text-[#ff6b5b] mb-2">
-                Wholesale Availability
-              </p>
-              <h3 className="text-2xl font-bold text-[#1f633f] dark:text-[#d8e7c9] mb-3">
-                Contact us for current pricing and quantities.
-              </h3>
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-4">
-                Minimum order: 1 pack - 200 available
-              </p>
-            </div>
 
             {/* Product Specs */}
             <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg">
@@ -261,7 +239,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
         {/* Reviews Section */}
         <section>
-          <ReviewsSection product={product} />
+          <ReviewsSection productId={product.id} productName={product.name} />
         </section>
       </main>
     </div>

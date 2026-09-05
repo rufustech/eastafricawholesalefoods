@@ -21,13 +21,6 @@ export function generateProductSchema(product: Product): JsonLdSchema {
     name: product.name,
     description: product.description,
     image: product.images.map((img) => img.url),
-    offers: {
-      "@type": "Offer",
-      price: product.pricing.retail.amount.toString(),
-      priceCurrency: product.pricing.retail.currency,
-      availability: product.inventory.available > 0 ? "InStock" : "OutOfStock",
-      url: `${typeof window !== "undefined" ? window.location.origin : ""}/products/${product.id}`,
-    },
     aggregateRating:
       product.rating && product.reviews
         ? {

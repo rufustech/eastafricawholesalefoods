@@ -39,14 +39,32 @@
   --color-neutral-700: #374151;
   --color-neutral-800: #1f2937;
   --color-neutral-900: #111827;
+  --color-neutral-950: #030712;
+}
+
+/* Dark mode colors */
+.dark {
+  color-scheme: dark;
+}
+
+.dark:root {
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-900: #111827;
+  --color-neutral-950: #030712;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
   }
 
   body {
+    height: 100%;
+    width: 100%;
     background-color: var(--color-neutral-50);
     color: var(--color-neutral-900);
     -webkit-font-smoothing: antialiased;
@@ -55,6 +73,16 @@
       Arial, sans-serif;
     transition-property: background-color, color;
     transition-duration: 200ms;
+  }
+
+  .dark {
+    background-color: #0f2a1d;
+    color: #f8f2e5;
+  }
+
+  .dark body {
+    background-color: #0f2a1d;
+    color: #f8f2e5;
   }
 
   /* Headings */
@@ -307,24 +335,100 @@
   }
 
   main > section:first-child > .container > div:first-child {
-    animation: hero-rise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: hero-slide-left 850ms cubic-bezier(0.22, 1, 0.36, 1) 300ms both;
   }
 
   main > section:first-child > .container > div:nth-child(2) {
-    animation: hero-rise 800ms 160ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: hero-slide-right 850ms 440ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .intro-overlay {
-    animation: intro-exit 180ms ease 820ms forwards;
+    animation: intro-exit 180ms ease 120ms forwards;
   }
 
   @keyframes intro-exit {
-    to { opacity: 0; visibility: hidden; }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   @keyframes hero-rise {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(-72px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes hero-slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(72px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scroll-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(42px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes card-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scroll-reveal-item {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   /* Keep pricing private until a wholesale quote is requested. */
@@ -348,10 +452,18 @@
     background-size: contain;
   }
 
-  #featured .grid > a:nth-child(1) > div:first-child { background-image: url("/agashya.jpg"); }
-  #featured .grid > a:nth-child(2) > div:first-child { background-image: url("/akabanga_chilli_oil.jpg"); }
-  #featured .grid > a:nth-child(3) > div:first-child { background-image: url("/ala_damiano_cassava_leaves.jpg"); }
-  #featured .grid > a:nth-child(4) > div:first-child { background-image: url("/bananas.jpg"); }
+  #featured .grid > a:nth-child(1) > div:first-child {
+    background-image: url("/agashya.jpg");
+  }
+  #featured .grid > a:nth-child(2) > div:first-child {
+    background-image: url("/akabanga_chilli_oil.jpg");
+  }
+  #featured .grid > a:nth-child(3) > div:first-child {
+    background-image: url("/ala_damiano_cassava_leaves.jpg");
+  }
+  #featured .grid > a:nth-child(4) > div:first-child {
+    background-image: url("/bananas.jpg");
+  }
 
   #featured .grid > a > div:first-child > span:first-child {
     color: transparent;
@@ -442,23 +554,115 @@
 /* Print styles */
 .group > div > div > span.grid.h-9.w-9,
 .group > div > span.grid.h-12.w-12 {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transform: none;
+  rotate: 0deg !important;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.group span.grid[class*="h-9"][class*="w-9"],
+.group span.grid[class*="h-12"][class*="w-12"] {
+  color: transparent !important;
+}
+
+#categories .mb-10 > a,
+#featured .mb-10 > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #d64b35;
+  border-radius: 9999px;
+  padding: 0.7rem 1.1rem;
+  color: #d64b35;
   font-size: 0;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+#categories .mb-10 > a::before {
+  content: "View products";
+  font-size: 0.875rem;
+}
+
+#featured .mb-10 > a::before {
+  content: "Browse catalogue";
+  font-size: 0.875rem;
+}
+
+#categories .mb-10 > a:hover,
+#featured .mb-10 > a:hover {
+  background-color: #d64b35;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.group span.grid[class*="h-9"][class*="w-9"]::after,
+.group span.grid[class*="h-12"][class*="w-12"]::after {
+  content: "View";
+  color: white;
+}
+
+.group:hover span.grid[class*="h-9"][class*="w-9"]::after,
+.group:hover span.grid[class*="h-12"][class*="w-12"]::after {
+  content: "Open";
+  color: white;
+}
+
+.group > div > div > span.grid.h-9.w-9 {
+  width: 5.5rem;
+  height: 2.25rem;
+}
+
+.group > div > span.grid.h-12.w-12 {
+  width: 6.5rem;
+  height: 3rem;
+  background-color: #1f633f;
+  color: white;
 }
 
 .group > div > div > span.grid.h-9.w-9::after,
 .group > div > span.grid.h-12.w-12::after {
-  width: 0.85rem;
-  height: 0.85rem;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-  content: "";
-  transform: rotate(45deg);
-  transition: transform 180ms ease;
+  content: "View";
+  color: white;
+}
+
+.group > div > div > span.grid.h-9.w-9::after {
+  content: "View";
+  color: white;
 }
 
 .group:hover > div > div > span.grid.h-9.w-9::after,
 .group:hover > div > span.grid.h-12.w-12::after {
-  transform: translate(2px, -2px) rotate(45deg);
+  content: "Open";
+  color: white;
+}
+
+.group:hover > div > div > span.grid.h-9.w-9::after {
+  content: "Open";
+  color: white;
+}
+
+.group:hover > div > div > span.grid.h-9.w-9,
+.group:hover > div > span.grid.h-12.w-12 {
+  background-color: #d64b35;
+  transform: scale(1.06) !important;
+  rotate: 0deg !important;
+}
+
+footer:not(.site-footer) {
+  display: none;
 }
 
 @media print {

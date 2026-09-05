@@ -27,9 +27,20 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Use an explicit saved choice; the site defaults to light mode.
+    // Get stored theme or use system preference
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY) as Theme | null;
-    const initialTheme = storedTheme || "light";
+
+    let initialTheme: Theme;
+    if (storedTheme) {
+      initialTheme = storedTheme;
+    } else {
+      // Check system preference
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      initialTheme = prefersDark ? "dark" : "light";
+    }
+
     setTheme(initialTheme);
     applyTheme(initialTheme);
     setIsMounted(true);

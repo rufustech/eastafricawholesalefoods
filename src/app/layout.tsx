@@ -4,6 +4,8 @@ import { StructuredData } from "@/components/seo/StructuredData";
 import { generateWebsiteSchema, generateOrganizationSchema } from "@/lib/seo";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { ConstructionGate } from "@/components/ConstructionGate";
+import { SiteFooter } from "@/components/SiteFooter";
+import { ScrollRevealEffects } from "@/components/ScrollRevealEffects";
 
 export const metadata: Metadata = {
   title: "East Africa Wholesale Foods - Premium Quality Products",
@@ -76,13 +78,39 @@ export default function RootLayout({
   });
 
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+      className="scroll-smooth bg-[#f8f2e5] dark:bg-[#0f2a1d]"
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0ea5e9" />
         <link rel="icon" href="/favicon.ico" />
         <StructuredData schema={[websiteSchema, organizationSchema]} />
+
+        {/* Apply dark mode BEFORE rendering starts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const stored = localStorage.getItem('theme-preference-v2');
+              const initial = stored || 'light';
+              const html = document.documentElement;
+              if (initial === 'dark') {
+                html.classList.add('dark');
+                html.style.backgroundColor = '#0f2a1d';
+                html.style.color = '#f8f2e5';
+              } else {
+                html.classList.remove('dark');
+                html.style.backgroundColor = '#f8f2e5';
+                html.style.color = '#173b2b';
+              }
+            `,
+          }}
+        />
+
         {/* Google Analytics */}
         <script
           async
@@ -99,8 +127,16 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50">
-        <ThemeProvider><ConstructionGate>{children}</ConstructionGate></ThemeProvider>
+      <body className="min-h-screen w-screen bg-[#f8f2e5] text-[#173b2b] dark:bg-[#0f2a1d] dark:text-[#f8f2e5]">
+        <ThemeProvider>
+          <ConstructionGate>
+            <>
+              <ScrollRevealEffects />
+              {children}
+              <SiteFooter />
+            </>
+          </ConstructionGate>
+        </ThemeProvider>
       </body>
     </html>
   );

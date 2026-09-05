@@ -41,14 +41,13 @@ export default function ProductsPage() {
 
   if (isLoading) return <BrandSpinner />;
 
+  // Filter logic
   let filtered = products;
 
-  // Filter by category
   if (selectedCategory) {
     filtered = filtered.filter((p) => p.category === selectedCategory);
   }
 
-  // Filter by search query
   if (searchQuery) {
     const query = searchQuery.toLowerCase();
     filtered = filtered.filter(
@@ -59,7 +58,7 @@ export default function ProductsPage() {
     );
   }
 
-  // Sort
+  // Sort logic
   const sorted = [...filtered].sort((a, b) => {
     switch (sortBy) {
       case "rating":
@@ -106,7 +105,7 @@ export default function ProductsPage() {
     <>
       <SiteHeader />
 
-      <main className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d]">
+      <main className="min-h-screen bg-[linear-gradient(120deg,#fbf7ee_0%,#f8efdf_52%,#f1dfcd_100%)] dark:bg-[#10251b]">
         <div className="container py-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar Filters */}
@@ -231,7 +230,7 @@ export default function ProductsPage() {
                 <>
                   {/* Products Grid */}
                   <div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8"
                     role="region"
                     aria-label="Product grid"
                   >
@@ -239,54 +238,71 @@ export default function ProductsPage() {
                       <Link
                         key={product.id}
                         href={`/products/${product.slug}`}
-                        className="group flex flex-col h-full bg-white dark:bg-neutral-800 hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 focus-within:ring-2 focus-within:ring-primary-500"
-                        aria-label={`View ${product.name} details`}
+                        className="group flex flex-col h-full bg-white dark:bg-neutral-800 hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 focus-within:ring-2 focus-within:ring-primary-500"
+                        aria-label={`View ${product.name} details - ${product.specs.origin}`}
                       >
                         {/* Product Image */}
-                        <div className="relative w-full aspect-square bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center p-6 overflow-hidden">
+                        <div className="relative w-full aspect-[4/3] bg-neutral-100 dark:bg-neutral-700 overflow-hidden">
                           <Image
                             src={
                               product.images[0]?.url ||
                               "/eastafricawholesalefoodsLogo.png"
                             }
                             alt={product.images[0]?.alt || product.name}
-                            width={200}
-                            height={200}
-                            className="object-contain group-hover:scale-105 transition-transform duration-300"
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
                           />
                         </div>
 
                         {/* Product Info */}
-                        <div className="p-5 flex-1 flex flex-col">
-                          <h3 className="font-bold text-lg text-neutral-900 dark:text-neutral-100 mb-2 line-clamp-2">
+                        <div className="p-4 flex-1 flex flex-col">
+                          <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-2">
+                            {product.category.replace(/-/g, " ")}
+                          </p>
+
+                          <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-2 line-clamp-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                             {product.name}
                           </h3>
 
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2 flex-1">
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3 line-clamp-2 flex-1">
                             {product.description}
                           </p>
 
-                          {/* Rating */}
-                          {product.rating && (
-                            <div className="flex items-center gap-2 mb-4">
-                              <span className="text-yellow-400 text-sm">
-                                {"★".repeat(Math.round(product.rating))}
-                                {"☆".repeat(5 - Math.round(product.rating))}
+                          {/* Rating & Origin */}
+                          <div className="flex items-center justify-between text-xs mb-3">
+                            <div className="flex items-center gap-1">
+                              <span
+                                className="text-primary-600 dark:text-primary-400"
+                                aria-label={`Rating: ${product.rating || 0} out of 5`}
+                              >
+                                {"★".repeat(Math.round(product.rating || 0))}
+                                {"☆".repeat(
+                                  5 - Math.round(product.rating || 0),
+                                )}
                               </span>
-                              <span className="text-xs text-neutral-600 dark:text-neutral-400">
-                                {product.rating.toFixed(1)} (
-                                {product.reviews || 0})
+                              <span className="text-neutral-600 dark:text-neutral-400">
+                                ({product.reviews || 0})
                               </span>
                             </div>
-                          )}
+                            <span
+                              className="text-neutral-600 dark:text-neutral-400"
+                              aria-label={`Origin: ${product.specs.origin}`}
+                            >
+                              {product.specs.origin}
+                            </span>
+                          </div>
 
-                          {/* View Details Button */}
-                          <button
-                            className="w-full bg-green-800 hover:bg-orange-700 dark:bg-green-800 dark:hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition-colors"
-                            aria-label={`View ${product.name} details`}
-                          >
-                            View Details
-                          </button>
+                          {/* Inventory Badge */}
+                          <div className="inline-flex">
+                            <span
+                              className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
+                              aria-label="Product inventory status"
+                            >
+                              {product.inventory}
+                            </span>
+                          </div>
                         </div>
                       </Link>
                     ))}

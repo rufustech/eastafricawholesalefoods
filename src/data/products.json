@@ -1,0 +1,1113 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "prod_001",
+      "name": "Agashya",
+      "slug": "agashya",
+      "category": "dry-goods",
+      "description": "Authentic East African pantry favourite for everyday meals. Rich in nutrients and traditional flavour.",
+      "images": [
+        {
+          "url": "/agashya.jpg",
+          "alt": "Agashya - Traditional East African staple"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 12,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_002",
+      "name": "Akabanga Chilli Oil",
+      "slug": "akabanga_chilli_oil",
+      "category": "spices-seasonings",
+      "description": "A vibrant chilli oil that brings depth and heat to every dish. Premium quality, cold-pressed.",
+      "images": [
+        {
+          "url": "/akabanga_chilli_oil.jpg",
+          "alt": "Akabanga Chilli Oil - Premium spice blend"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 28,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Rwanda",
+        "storageCondition": "Cool location, sealed container",
+        "certification": ["traditional", "artisan"]
+      },
+      "createdAt": "2024-02-20T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_003",
+      "name": "Ala Damiano Cassava Leaves",
+      "slug": "ala_damiano_cassava_leaves",
+      "category": "frozen-vegetables",
+      "description": "Carefully prepared cassava leaves, ready for traditional recipes. Nutrient-rich and convenient.",
+      "images": [
+        {
+          "url": "/ala_damiano_cassava_leaves.jpg",
+          "alt": "Ala Damiano Cassava Leaves - Frozen vegetable"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 15,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_004",
+      "name": "Bananas",
+      "slug": "bananas",
+      "category": "fresh-produce",
+      "description": "Sweet, versatile bananas selected for quality and freshness. Perfect for cooking or fresh consumption.",
+      "images": [
+        {
+          "url": "/bananas.jpg",
+          "alt": "Fresh Bananas - Premium quality"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 34,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Room temperature",
+        "certification": ["fresh"]
+      },
+      "createdAt": "2024-01-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_005",
+      "name": "Blue Band",
+      "slug": "blue_band",
+      "category": "dairy-spreads",
+      "description": "A smooth everyday spread for breakfast, baking, and cooking. Versatile and reliable.",
+      "images": [
+        {
+          "url": "/blue_band.jpg",
+          "alt": "Blue Band - Dairy spread"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 22,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-01-20T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_006",
+      "name": "Cassava Flour",
+      "slug": "cassava_flour",
+      "category": "flours-grains",
+      "description": "Fine cassava flour for baking, thickening, and traditional dishes. Gluten-free option.",
+      "images": [
+        {
+          "url": "/cassava_flour.jpg",
+          "alt": "Cassava Flour - Premium grain product"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 18,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-02-12T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_007",
+      "name": "Curry Powder",
+      "slug": "curry_powder",
+      "category": "spices-seasonings",
+      "description": "A balanced aromatic blend for curries, stews, and marinades. Made from premium spices.",
+      "images": [
+        {
+          "url": "/curry_powder.jpg",
+          "alt": "Curry Powder - Spice blend"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 31,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Airtight container",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-25T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_008",
+      "name": "Fanta Orange",
+      "slug": "fanta_orange",
+      "category": "soft-drinks",
+      "description": "Bright, refreshing fruit soda for shops, restaurants, and events. Popular classic flavour.",
+      "images": [
+        {
+          "url": "/fanta.jpg",
+          "alt": "Fanta Orange - Refreshing beverage"
+        }
+      ],
+      "rating": 4.2,
+      "reviews": 19,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Room temperature or refrigerated",
+        "certification": []
+      },
+      "createdAt": "2024-03-01T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_009",
+      "name": "Green Beans",
+      "slug": "green_beans",
+      "category": "frozen-vegetables",
+      "description": "Crisp green beans prepared for quick, convenient cooking. Flash-frozen for quality.",
+      "images": [
+        {
+          "url": "/greenbeans.jpg",
+          "alt": "Green Beans - Frozen vegetable"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 20,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-15T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_010",
+      "name": "Kinazi Cassava Flour",
+      "slug": "kinazi_cassava_flour",
+      "category": "flours-grains",
+      "description": "Quality cassava flour with a smooth texture for home and professional kitchens.",
+      "images": [
+        {
+          "url": "/kinazi_cassava_flour.jpg",
+          "alt": "Kinazi Cassava Flour - Quality grain"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 16,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Rwanda",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-02-22T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_011",
+      "name": "Kisubi Tea",
+      "slug": "kisubi_tea",
+      "category": "tea-coffee",
+      "description": "Rich, comforting tea selected for a full-bodied daily cup. Premium blend from East Africa.",
+      "images": [
+        {
+          "url": "/kisubi_tea.jpg",
+          "alt": "Kisubi Tea - Premium tea blend"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 25,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-30T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_012",
+      "name": "Maganjo Maize Flour",
+      "slug": "maganjo_maize_flour",
+      "category": "flours-grains",
+      "description": "Fine maize flour for ugali, porridge, baking, and family meals. Traditional staple.",
+      "images": [
+        {
+          "url": "/maganjo_maize_flour.jpg",
+          "alt": "Maganjo Maize Flour - Traditional grain"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 29,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Uganda",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_013",
+      "name": "Millet Karo",
+      "slug": "millet_karo",
+      "category": "flours-grains",
+      "description": "Wholesome millet staple with a naturally nutty flavour. Nutritious and versatile.",
+      "images": [
+        {
+          "url": "/millet_karo.jpg",
+          "alt": "Millet Karo - Nutty grain"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 14,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-28T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_014",
+      "name": "Mochaberry Coffee",
+      "slug": "mochaberry_coffee",
+      "category": "tea-coffee",
+      "description": "A fragrant coffee blend made for a rich, smooth brew. Premium quality beans.",
+      "images": [
+        {
+          "url": "/mochaberry_coffee.jpg",
+          "alt": "Mochaberry Coffee - Premium blend"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 35,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["specialty"]
+      },
+      "createdAt": "2024-01-12T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_015",
+      "name": "Nestle Cerelac",
+      "slug": "nestle_cerelac",
+      "category": "baby-foods",
+      "description": "Convenient nutrition for growing families. Fortified with essential vitamins.",
+      "images": [
+        {
+          "url": "/nestle_cerelac.jpg",
+          "alt": "Nestle Cerelac - Nutritious baby food"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 22,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["fortified"]
+      },
+      "createdAt": "2024-02-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_016",
+      "name": "Samaki Sardines",
+      "slug": "samaki_sardines",
+      "category": "canned-fish",
+      "description": "High-quality canned sardines rich in omega-3s. Ready to eat, perfect for quick meals.",
+      "images": [
+        {
+          "url": "/talapia_fish.jpg",
+          "alt": "Samaki Sardines - Canned fish"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 18,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["omega-rich"]
+      },
+      "createdAt": "2024-03-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_017",
+      "name": "Sukuma Wiki (Collard Greens)",
+      "slug": "sukuma_wiki",
+      "category": "frozen-vegetables",
+      "description": "Frozen collard greens, a favourite dark leafy vegetable. Ready to cook.",
+      "images": [
+        {
+          "url": "/sosoma1.jpg",
+          "alt": "Sukuma Wiki - Frozen greens"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 21,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-18T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_018",
+      "name": "Sunflower Oil",
+      "slug": "sunflower_oil",
+      "category": "oils-fats",
+      "description": "Pure, refined sunflower oil perfect for cooking and frying. Light and versatile.",
+      "images": [
+        {
+          "url": "/nestle_nido.jpg",
+          "alt": "Sunflower Oil - Cooking oil"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 27,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dark place",
+        "certification": []
+      },
+      "createdAt": "2024-01-18T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_019",
+      "name": "Pilipili (Hot Pepper Sauce)",
+      "slug": "pilipili_hot_pepper_sauce",
+      "category": "condiments",
+      "description": "Authentic hot pepper sauce with a kick. Adds heat to any dish.",
+      "images": [
+        {
+          "url": "/salsa.jpg",
+          "alt": "Pilipili - Hot pepper sauce"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 32,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-02-25T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_020",
+      "name": "Sorghum Flour",
+      "slug": "sorghum_flour",
+      "category": "flours-grains",
+      "description": "Nutritious sorghum flour for traditional and modern cooking. Ancient grain staple.",
+      "images": [
+        {
+          "url": "/agashya.png",
+          "alt": "Sorghum Flour - Ancient grain"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 11,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-03-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_021",
+      "name": "Mandazi Mix",
+      "slug": "mandazi_mix",
+      "category": "baking-mixes",
+      "description": "Pre-made mix for traditional mandazi doughnuts. Easy and convenient.",
+      "images": [
+        {
+          "url": "/royco_mchuzi_mix.jpg",
+          "alt": "Mandazi Mix - Baking convenience"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 17,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-08T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_022",
+      "name": "Githeri Mix (Corn & Beans)",
+      "slug": "githeri_mix",
+      "category": "canned-legumes",
+      "description": "Traditional githeri mix - corn and beans combination. Ready to prepare.",
+      "images": [
+        {
+          "url": "/yellow_corn.jpg",
+          "alt": "Githeri Mix - Traditional blend"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 19,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": []
+      },
+      "createdAt": "2024-01-22T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_023",
+      "name": "Chapati Flour",
+      "slug": "chapati_flour",
+      "category": "flours-grains",
+      "description": "Specially formulated flour for perfect chapati flatbreads. Easy kneading and rolling.",
+      "images": [
+        {
+          "url": "/maganjo_maize_flour.jpg",
+          "alt": "Chapati Flour - Flatbread flour"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 24,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-01T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_024",
+      "name": "Coconut Milk",
+      "slug": "coconut_milk",
+      "category": "canned-dairy",
+      "description": "Rich, creamy coconut milk for curries and traditional dishes. Full-fat quality.",
+      "images": [
+        {
+          "url": "/blue_band.jpg",
+          "alt": "Coconut Milk - Canned dairy"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 30,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": []
+      },
+      "createdAt": "2024-01-28T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    }
+  ],
+  "total": 24
+}
+    {
+      "id": "prod_001",
+      "name": "Agashya",
+      "slug": "agashya",
+      "category": "dry-goods",
+      "description": "Authentic East African pantry favourite for everyday meals. Rich in nutrients and traditional flavour.",
+      "images": [
+        {
+          "url": "/images/products/agashya.png",
+          "alt": "Agashya - Traditional East African staple"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 12,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_002",
+      "name": "Akabanga Chilli Oil",
+      "slug": "akabanga_chilli_oil",
+      "category": "spices",
+      "description": "A vibrant chilli oil that brings depth and heat to every dish. Premium quality, cold-pressed.",
+      "images": [
+        {
+          "url": "/images/products/akabanga_chilli_oil.jpg",
+          "alt": "Akabanga Chilli Oil - Premium spice blend"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 28,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Rwanda",
+        "storageCondition": "Cool location, sealed container",
+        "certification": ["traditional", "artisan"]
+      },
+      "createdAt": "2024-02-20T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_003",
+      "name": "Ala Damiano Cassava Leaves",
+      "slug": "ala_damiano_cassava_leaves",
+      "category": "frozen-vegetables",
+      "description": "Carefully prepared cassava leaves, ready for traditional recipes. Nutrient-rich and convenient.",
+      "images": [
+        {
+          "url": "/images/products/ala_damiano_cassava_leaves.jpg",
+          "alt": "Ala Damiano Cassava Leaves - Frozen vegetable"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 15,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_004",
+      "name": "Bananas",
+      "slug": "bananas",
+      "category": "fresh-produce",
+      "description": "Sweet, versatile bananas selected for quality and freshness. Perfect for cooking or fresh consumption.",
+      "images": [
+        {
+          "url": "/images/products/bananas.jpg",
+          "alt": "Fresh Bananas - Premium quality"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 34,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Room temperature",
+        "certification": ["fresh"]
+      },
+      "createdAt": "2024-01-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_005",
+      "name": "Blue Band",
+      "slug": "blue_band",
+      "category": "dairy-spreads",
+      "description": "A smooth everyday spread for breakfast, baking, and cooking. Versatile and reliable.",
+      "images": [
+        {
+          "url": "/images/products/blue_band.jpg",
+          "alt": "Blue Band - Dairy spread"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 22,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-01-20T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_006",
+      "name": "Cassava Flour",
+      "slug": "cassava_flour",
+      "category": "flours-grains",
+      "description": "Fine cassava flour for baking, thickening, and traditional dishes. Gluten-free option.",
+      "images": [
+        {
+          "url": "/images/products/cassava_flour.jpg",
+          "alt": "Cassava Flour - Premium grain product"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 18,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-02-12T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_007",
+      "name": "Curry Powder",
+      "slug": "curry_powder",
+      "category": "spices",
+      "description": "A balanced aromatic blend for curries, stews, and marinades. Made from premium spices.",
+      "images": [
+        {
+          "url": "/images/products/curry_powder.jpg",
+          "alt": "Curry Powder - Spice blend"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 31,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Airtight container",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-25T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_008",
+      "name": "Fanta Orange",
+      "slug": "fanta_orange",
+      "category": "beverages",
+      "description": "Bright, refreshing fruit soda for shops, restaurants, and events. Popular classic flavour.",
+      "images": [
+        {
+          "url": "/images/products/fanta.jpg",
+          "alt": "Fanta Orange - Refreshing beverage"
+        }
+      ],
+      "rating": 4.2,
+      "reviews": 19,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Room temperature or refrigerated",
+        "certification": []
+      },
+      "createdAt": "2024-03-01T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_009",
+      "name": "Green Beans",
+      "slug": "green_beans",
+      "category": "frozen-vegetables",
+      "description": "Crisp green beans prepared for quick, convenient cooking. Flash-frozen for quality.",
+      "images": [
+        {
+          "url": "/images/products/greenbeans.jpg",
+          "alt": "Green Beans - Frozen vegetable"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 20,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-15T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_010",
+      "name": "Kinazi Cassava Flour",
+      "slug": "kinazi_cassava_flour",
+      "category": "flours-grains",
+      "description": "Quality cassava flour with a smooth texture for home and professional kitchens.",
+      "images": [
+        {
+          "url": "/images/products/kinazi_cassava_flour.jpg",
+          "alt": "Kinazi Cassava Flour - Quality grain"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 16,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Rwanda",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-02-22T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_011",
+      "name": "Kisubi Tea",
+      "slug": "kisubi_tea",
+      "category": "beverages",
+      "description": "Rich, comforting tea selected for a full-bodied daily cup. Premium blend from East Africa.",
+      "images": [
+        {
+          "url": "/images/products/kisubi_tea.jpg",
+          "alt": "Kisubi Tea - Premium tea blend"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 25,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-30T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_012",
+      "name": "Maganjo Maize Flour",
+      "slug": "maganjo_maize_flour",
+      "category": "flours-grains",
+      "description": "Fine maize flour for ugali, porridge, baking, and family meals. Traditional staple.",
+      "images": [
+        {
+          "url": "/images/products/maganjo_maize_flour.jpg",
+          "alt": "Maganjo Maize Flour - Traditional grain"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 29,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Uganda",
+        "storageCondition": "Cool, dry place",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-01-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_013",
+      "name": "Millet Karo",
+      "slug": "millet_karo",
+      "category": "flours-grains",
+      "description": "Wholesome millet staple with a naturally nutty flavour. Nutritious and versatile.",
+      "images": [
+        {
+          "url": "/images/products/millet_karo.jpg",
+          "alt": "Millet Karo - Nutty grain"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 14,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-28T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_014",
+      "name": "Mochaberry Coffee",
+      "slug": "mochaberry_coffee",
+      "category": "beverages",
+      "description": "A fragrant coffee blend made for a rich, smooth brew. Premium quality beans.",
+      "images": [
+        {
+          "url": "/images/products/mochaberry_coffee.jpg",
+          "alt": "Mochaberry Coffee - Premium blend"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 35,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["specialty"]
+      },
+      "createdAt": "2024-01-12T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_015",
+      "name": "Nestle Cerelac",
+      "slug": "nestle_cerelac",
+      "category": "baby-foods",
+      "description": "Convenient nutrition for growing families. Fortified with essential vitamins.",
+      "images": [
+        {
+          "url": "/images/products/nestle_cerelac.jpg",
+          "alt": "Nestle Cerelac - Nutritious baby food"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 22,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["fortified"]
+      },
+      "createdAt": "2024-02-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_016",
+      "name": "Samaki Sardines",
+      "slug": "samaki_sardines",
+      "category": "canned-fish",
+      "description": "High-quality canned sardines rich in omega-3s. Ready to eat, perfect for quick meals.",
+      "images": [
+        {
+          "url": "/images/products/samaki_sardines.jpg",
+          "alt": "Samaki Sardines - Canned fish"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 18,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["omega-rich"]
+      },
+      "createdAt": "2024-03-10T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_017",
+      "name": "Sukuma Wiki (Collard Greens)",
+      "slug": "sukuma_wiki",
+      "category": "frozen-vegetables",
+      "description": "Frozen collard greens, a favourite dark leafy vegetable. Ready to cook.",
+      "images": [
+        {
+          "url": "/images/products/sukuma_wiki.jpg",
+          "alt": "Sukuma Wiki - Frozen greens"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 21,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["frozen"]
+      },
+      "createdAt": "2024-02-18T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_018",
+      "name": "Sunflower Oil",
+      "slug": "sunflower_oil",
+      "category": "oils-fats",
+      "description": "Pure, refined sunflower oil perfect for cooking and frying. Light and versatile.",
+      "images": [
+        {
+          "url": "/images/products/sunflower_oil.jpg",
+          "alt": "Sunflower Oil - Cooking oil"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 27,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dark place",
+        "certification": []
+      },
+      "createdAt": "2024-01-18T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_019",
+      "name": "Pilipili (Hot Pepper Sauce)",
+      "slug": "pilipili_hot_pepper_sauce",
+      "category": "condiments",
+      "description": "Authentic hot pepper sauce with a kick. Adds heat to any dish.",
+      "images": [
+        {
+          "url": "/images/products/pilipili.jpg",
+          "alt": "Pilipili - Hot pepper sauce"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 32,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["traditional"]
+      },
+      "createdAt": "2024-02-25T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_020",
+      "name": "Sorghum Flour",
+      "slug": "sorghum_flour",
+      "category": "flours-grains",
+      "description": "Nutritious sorghum flour for traditional and modern cooking. Ancient grain staple.",
+      "images": [
+        {
+          "url": "/images/products/sorghum_flour.jpg",
+          "alt": "Sorghum Flour - Ancient grain"
+        }
+      ],
+      "rating": 4.3,
+      "reviews": 11,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["gluten-free"]
+      },
+      "createdAt": "2024-03-05T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_021",
+      "name": "Mandazi Mix",
+      "slug": "mandazi_mix",
+      "category": "baking-mixes",
+      "description": "Pre-made mix for traditional mandazi doughnuts. Easy and convenient.",
+      "images": [
+        {
+          "url": "/images/products/mandazi_mix.jpg",
+          "alt": "Mandazi Mix - Baking convenience"
+        }
+      ],
+      "rating": 4.4,
+      "reviews": 17,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-08T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_022",
+      "name": "Githeri Mix (Corn & Beans)",
+      "slug": "githeri_mix",
+      "category": "canned-legumes",
+      "description": "Traditional githeri mix - corn and beans combination. Ready to prepare.",
+      "images": [
+        {
+          "url": "/images/products/githeri_mix.jpg",
+          "alt": "Githeri Mix - Traditional blend"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 19,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": []
+      },
+      "createdAt": "2024-01-22T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_023",
+      "name": "Chapati Flour",
+      "slug": "chapati_flour",
+      "category": "flours-grains",
+      "description": "Specially formulated flour for perfect chapati flatbreads. Easy kneading and rolling.",
+      "images": [
+        {
+          "url": "/images/products/chapati_flour.jpg",
+          "alt": "Chapati Flour - Flatbread flour"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 24,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-02-01T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
+      "id": "prod_024",
+      "name": "Coconut Milk",
+      "slug": "coconut_milk",
+      "category": "canned-dairy",
+      "description": "Rich, creamy coconut milk for curries and traditional dishes. Full-fat quality.",
+      "images": [
+        {
+          "url": "/images/products/coconut_milk.jpg",
+          "alt": "Coconut Milk - Canned dairy"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 30,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": []
+      },
+      "createdAt": "2024-01-28T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    }
+  ],
+  "total": 24
+}
