@@ -64,5 +64,3 @@ export interface SearchFilters {
   sortBy?: "name" | "rating" | "newest";
   sortOrder?: "asc" | "desc";
 }
-  pageSize: number;
-}

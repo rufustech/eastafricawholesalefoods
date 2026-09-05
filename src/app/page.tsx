@@ -55,8 +55,8 @@ export default function Home() {
               </text>
             </svg>
             <div className="relative text-center">
-              <span className="block font-serif text-5xl font-bold text-[#b8d58e]">
-                EA
+              <span className="block font-serif text-2xl font-bold text-[#b8d58e] leading-tight">
+                100% Organic
               </span>
               <span className="mt-2 block text-[9px] font-bold uppercase tracking-[0.25em] text-[#e8846f]">
                 Good sourcing
@@ -181,7 +181,7 @@ export default function Home() {
                 Browse Categories
               </h3>
               <div className="grid gap-3 sm:grid-cols-2">
-                {categories.slice(0, 6).map((category, index) => (
+                {categories.slice(0, 8).map((category, index) => (
                   <Link
                     key={category.id}
                     href={`/products?category=${category.slug}`}
@@ -199,7 +199,11 @@ export default function Home() {
                                 ? "🥘"
                                 : index === 4
                                   ? "🍚"
-                                  : "🧂"}
+                                  : index === 5
+                                    ? "🧂"
+                                    : index === 6
+                                      ? "🫘"
+                                      : "🥫"}
                       </span>
                       <div className="flex-1 min-w-0">
                         <p className="font-bold text-sm text-[#173b2b] dark:text-[#f8f2e5] truncate">
