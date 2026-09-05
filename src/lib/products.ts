@@ -2,11 +2,12 @@
  * Product Utilities - Search, Filter, Format Helpers
  */
 
-import { Product, SearchFilters, SearchResult } from "@/types/product";
+import { Product, SearchFilters } from "@/types/product";
 
 /** Convert a product name into the SEO URL format used by the catalogue. */
 export function getProductSlug(productOrName: Product | string): string {
-  const name = typeof productOrName === "string" ? productOrName : productOrName.name;
+  const name =
+    typeof productOrName === "string" ? productOrName : productOrName.name;
   return name
     .trim()
     .toLowerCase()
@@ -34,14 +35,6 @@ export function filterProducts(
     // Category filter
     if (filters.category && product.category !== filters.category) return false;
 
-    // Price range filter
-    const retailPrice = product.pricing.retail.amount;
-    if (filters.minPrice && retailPrice < filters.minPrice) return false;
-    if (filters.maxPrice && retailPrice > filters.maxPrice) return false;
-
-    // In stock filter
-    if (filters.inStock && product.inventory.available === 0) return false;
-
     return true;
   });
 }
@@ -61,11 +54,6 @@ export function sortProducts(
     let compareA: any = a[sortBy as keyof Product];
     let compareB: any = b[sortBy as keyof Product];
 
-    if (sortBy === "price") {
-      compareA = a.pricing.retail.amount;
-      compareB = b.pricing.retail.amount;
-    }
-
     if (compareA < compareB) return isAsc ? -1 : 1;
     if (compareA > compareB) return isAsc ? 1 : -1;
     return 0;
@@ -81,7 +69,7 @@ export function paginateProducts(
   products: Product[],
   page: number = 1,
   pageSize: number = 12,
-): SearchResult {
+): { products: Product[]; total: number; page: number; pageSize: number } {
   const total = products.length;
   const start = (page - 1) * pageSize;
   const end = start + pageSize;
@@ -103,7 +91,7 @@ export function searchProducts(
   filters: SearchFilters,
   page: number = 1,
   pageSize: number = 12,
-): SearchResult {
+): { products: Product[]; total: number; page: number; pageSize: number } {
   let results = filterProducts(products, filters);
   results = sortProducts(
     results,
@@ -135,42 +123,17 @@ export function getDiscountPercentage(
 }
 
 /**
- * Check if product is low stock
+ * Check if product is in stock
  */
-export function isLowStock(product: Product, threshold: number = 5): boolean {
-  return (
-    product.inventory.available > 0 && product.inventory.available <= threshold
-  );
+export function isInStock(product: Product): boolean {
+  return product.inventory === "In Inventory";
 }
 
 /**
  * Check if product is out of stock
  */
 export function isOutOfStock(product: Product): boolean {
-  return product.inventory.available === 0;
-}
-
-/**
- * Get applicable price tier for quantity
- */
-export function getApplicablePrice(product: Product, quantity: number) {
-  if (product.pricing.bulk && quantity >= 100) {
-    return product.pricing.bulk;
-  }
-  if (product.pricing.wholesale && quantity >= 50) {
-    return product.pricing.wholesale;
-  }
-  return product.pricing.retail;
-}
-
-/**
- * Calculate total price with tax
- */
-export function calculateTotalWithTax(
-  basePrice: number,
-  taxRate: number = 0.16,
-): number {
-  return basePrice * (1 + taxRate);
+  return product.inventory !== "In Inventory";
 }
 
 /**

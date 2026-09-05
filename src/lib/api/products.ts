@@ -9,7 +9,7 @@
  */
 
 import { Product } from "@/types/product";
-import productsData from "@/data/products.json";
+import productsData from "@/data/products.json" assert { type: "json" };
 
 /**
  * Fetch all products
@@ -101,7 +101,7 @@ export async function fetchProductsByCategory(
     // return data.data || [];
 
     // For now, filter mock data
-    return mockProducts.filter((p) => p.category === category);
+    return (productsData.data || []).filter((p) => p.category === category);
   } catch (error) {
     console.error(`Failed to fetch products for category ${category}:`, error);
     return [];

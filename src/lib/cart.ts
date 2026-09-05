@@ -121,7 +121,8 @@ export function getCartTotals(cart: Cart) {
 
   cart.items.forEach((item) => {
     const quantity = item.quantity;
-    const price = item.product.pricing.retail.amount; // Use retail price by default
+    // TODO: Add pricing data to products when backend is ready
+    const price = 50; // Placeholder price
     subtotal += price * quantity;
     itemCount += quantity;
   });
