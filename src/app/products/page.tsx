@@ -10,6 +10,7 @@ import { Product } from "@/types/product";
 import { SiteHeader } from "@/components/SiteHeader";
 import { BrandSpinner } from "@/components/BrandSpinner";
 import { Pagination } from "@/components/products/Pagination";
+import { CategoryScroll } from "@/components/products/CategoryScroll";
 
 type SortOption = "name" | "rating" | "newest";
 
@@ -118,9 +119,18 @@ export default function ProductsPage() {
 
       <main className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d]">
         <div className="container py-8">
+          {/* Mobile Category Scroll */}
+          <CategoryScroll
+            selectedCategory={selectedCategory}
+            onCategoryChange={handleCategoryChange}
+          />
+
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Sidebar Filters */}
-            <aside className="lg:col-span-1" aria-label="Product filters">
+            {/* Sidebar Filters - Hidden on Mobile */}
+            <aside
+              className="hidden lg:block lg:col-span-1"
+              aria-label="Product filters"
+            >
               <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-neutral-700 sticky top-4">
                 {/* Search */}
                 <div>
@@ -241,7 +251,7 @@ export default function ProductsPage() {
                 <>
                   {/* Products Grid */}
                   <div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+                    className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
                     role="region"
                     aria-label="Product grid"
                   >
