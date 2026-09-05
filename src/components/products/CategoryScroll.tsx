@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { categories } from "@/data/categories";
 
 interface CategoryScrollProps {
@@ -9,17 +8,14 @@ interface CategoryScrollProps {
   onCategoryChange: (slug: string | null) => void;
 }
 
-const ITEM_HEIGHT = 60;
+const ITEM_HEIGHT = 70;
 
 export function CategoryScroll({
   selectedCategory,
   onCategoryChange,
 }: CategoryScrollProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [displayedItems, setDisplayedItems] = useState([
-    null,
-    ...categories.slice(0, 2),
-  ]);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // All items including "All"
   const allItems = [
@@ -32,7 +28,6 @@ export function CategoryScroll({
     if (!container) return;
 
     const handleScroll = () => {
-      // Find which item is in the middle
       const scrollTop = container.scrollTop;
       const middleIndex = Math.round(scrollTop / ITEM_HEIGHT);
       const centerItem =
@@ -42,92 +37,111 @@ export function CategoryScroll({
         onCategoryChange(centerItem.slug);
       }
 
-      // Update displayed items (3 visible)
-      const displayStart = Math.max(0, middleIndex - 1);
-      const displayEnd = Math.min(allItems.length, displayStart + 3);
-      setDisplayedItems(allItems.slice(displayStart, displayEnd));
+      setScrollProgress(scrollTop);
     };
 
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
   }, [allItems, onCategoryChange]);
 
-  return (
-    <div className="mb-8 lg:hidden flex justify-center px-4">
-      <div className="relative w-full max-w-sm">
-        {/* Top Arrow */}
-        <div className="flex justify-center mb-3">
-          <FaChevronUp className="text-[#1f633f] dark:text-[#b8d58e] text-lg opacity-70" />
-        </div>
+  const getItemScale = (index: number) => {
+    const middleIndex = Math.round(scrollProgress / ITEM_HEIGHT);
+    const distance = Math.abs(index - middleIndex);
+    if (distance === 0) return 1.15;
+    if (distance === 1) return 0.95;
+    return 0.85;
+  };
 
-        {/* Scroll Wheel - Clean Design */}
-        <div className="relative rounded-3xl overflow-hidden border-2 border-[#1f633f]/30 dark:border-[#b8d58e]/30 bg-white dark:bg-neutral-800/50">
+  const getItemOpacity = (index: number) => {
+    const middleIndex = Math.round(scrollProgress / ITEM_HEIGHT);
+    const distance = Math.abs(index - middleIndex);
+    if (distance === 0) return 1;
+    if (distance === 1) return 0.7;
+    return 0.4;
+  };
+
+  return (
+    <div className="mb-8 lg:hidden flex justify-center">
+      <div className="relative w-[calc(100%-2rem)] max-w-sm">
+        {/* Scroll Wheel - Magical Design */}
+        <div className="relative rounded-3xl overflow-hidden bg-linear-to-b from-[#f8f2e5]/50 to-[#f8f2e5]/20 dark:from-neutral-800/50 dark:to-neutral-900/20 backdrop-blur-sm border border-[#1f633f]/20 dark:border-[#b8d58e]/20 shadow-2xl">
           {/* Vertical scroll container */}
           <div
             ref={scrollContainerRef}
-            className="h-56 overflow-y-scroll scroll-smooth"
+            className="h-72 overflow-y-scroll scroll-smooth relative"
             style={{
               scrollBehavior: "smooth",
-              scrollSnapType: "y mandatory",
+              scrollSnapType: "y proximity",
             }}
           >
             {/* Top padding */}
-            <div style={{ height: `${ITEM_HEIGHT}px` }} />
+            <div style={{ height: `${ITEM_HEIGHT * 1.5}px` }} />
 
             {/* Category items */}
             {allItems.map((item, idx) => {
               const isSelected =
                 item.slug === selectedCategory ||
                 (selectedCategory === null && item.slug === null);
+              const scale = getItemScale(idx);
+              const opacity = getItemOpacity(idx);
 
               return (
-                <div key={item.id}>
+                <div
+                  key={item.id}
+                  style={{
+                    height: ITEM_HEIGHT,
+                    scrollSnapAlign: "center",
+                    scrollSnapStop: "always",
+                  }}
+                  className="flex items-center justify-center"
+                >
                   <button
                     onClick={() => {
                       onCategoryChange(item.slug);
-                      const index = allItems.indexOf(item);
+                      const scrollTop = idx * ITEM_HEIGHT;
                       scrollContainerRef.current?.scrollTo({
-                        top: index * ITEM_HEIGHT,
+                        top: scrollTop,
                         behavior: "smooth",
                       });
                     }}
-                    className={`w-full px-6 py-4 text-left transition-all duration-200 flex items-center gap-3 ${
-                      isSelected
-                        ? "bg-[#d4e8e3] dark:bg-[#1f633f]/40 text-[#1f633f] dark:text-[#b8d58e]"
-                        : "bg-transparent text-[#173b2b] dark:text-[#f8f2e5]/70"
-                    }`}
+                    className="relative w-4/5 mx-auto transition-all duration-300 ease-out"
                     style={{
-                      height: ITEM_HEIGHT,
-                      scrollSnapAlign: "center",
+                      transform: `scale(${scale})`,
+                      opacity: opacity,
                     }}
                   >
-                    <span className="text-2xl">{item.icon}</span>
-                    <span
-                      className={`font-medium ${isSelected ? "text-base font-semibold" : "text-sm"}`}
+                    <div
+                      className={`px-6 py-4 rounded-2xl flex items-center gap-3 transition-all duration-300 ${
+                        isSelected
+                          ? "bg-[#1f633f] dark:bg-[#1f633f] text-white shadow-2xl shadow-[#1f633f]/40"
+                          : "bg-white/60 dark:bg-neutral-700/40 text-[#173b2b] dark:text-[#f8f2e5]/70 backdrop-blur-sm"
+                      }`}
                     >
-                      {item.name}
-                    </span>
+                      <span className="text-2xl">{item.icon}</span>
+                      <span
+                        className={`font-semibold ${
+                          isSelected ? "text-base" : "text-sm"
+                        }`}
+                      >
+                        {item.name}
+                      </span>
+                    </div>
                   </button>
-                  {idx < allItems.length - 1 && (
-                    <div className="h-px bg-[#1f633f]/10 dark:bg-[#b8d58e]/10" />
-                  )}
                 </div>
               );
             })}
 
             {/* Bottom padding */}
-            <div style={{ height: `${ITEM_HEIGHT}px` }} />
+            <div style={{ height: `${ITEM_HEIGHT * 1.5}px` }} />
           </div>
-        </div>
 
-        {/* Bottom Arrow */}
-        <div className="flex justify-center mt-3">
-          <FaChevronDown className="text-[#1f633f] dark:text-[#b8d58e] text-lg opacity-70" />
+          {/* Center Highlight Indicator */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-20 rounded-2xl border-2 border-[#1f633f]/30 dark:border-[#b8d58e]/30 pointer-events-none shadow-inner" />
         </div>
 
         {/* Helper Text */}
-        <p className="text-center text-xs text-[#1f633f] dark:text-[#b8d58e] mt-3 font-medium">
-          Scroll to browse
+        <p className="text-center text-xs text-[#1f633f] dark:text-[#b8d58e] mt-4 font-medium opacity-70">
+          Scroll to select
         </p>
       </div>
 

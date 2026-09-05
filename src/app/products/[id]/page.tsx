@@ -57,7 +57,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
   if (!product) {
     return (
-      <div className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] flex items-center justify-center px-4">
+      <div className="min-h-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400">
             Not Found
@@ -85,7 +85,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] text-neutral-900 dark:text-neutral-100">
+    <div className="min-h-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] text-neutral-900 dark:text-neutral-100">
       <StructuredData schema={generateProductSchema(product)} />
       <SiteHeader />
 

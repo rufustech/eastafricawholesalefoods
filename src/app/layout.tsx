@@ -127,7 +127,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen w-screen bg-[#f8f2e5] text-[#173b2b] dark:bg-[#0f2a1d] dark:text-[#f8f2e5]">
+      <body className="min-h-screen bg-[#f8f2e5] text-[#173b2b] dark:bg-[#0f2a1d] dark:text-[#f8f2e5]">
         <ThemeProvider>
           <ConstructionGate>
             <>

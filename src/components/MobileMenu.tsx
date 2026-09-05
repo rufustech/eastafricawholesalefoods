@@ -63,7 +63,7 @@ export function MobileMenu({ onLinkClick }: MobileMenuProps) {
 
       {/* Mobile Menu */}
       <nav
-        className={`fixed top-0 right-0 h-screen w-64 bg-[#fbf7ee] dark:bg-[#0f2a1d] md:hidden z-40 transform transition-transform duration-300 ease-out shadow-2xl overflow-y-auto ${
+        className={`fixed top-0 right-0 h-screen w-[85vw] max-w-xs bg-[#fbf7ee] dark:bg-[#0f2a1d] md:hidden z-40 transform transition-transform duration-300 ease-out shadow-2xl overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{

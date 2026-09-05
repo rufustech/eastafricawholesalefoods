@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] text-neutral-900 dark:text-neutral-100">
+    <div className="min-h-screen bg-[#f8f2e5] dark:bg-[#0f2a1d] text-neutral-900 dark:text-neutral-100">
       <SiteHeader />
 
       <main className="container py-10 md:py-16">

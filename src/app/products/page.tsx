@@ -117,7 +117,7 @@ export default function ProductsPage() {
     <>
       <SiteHeader />
 
-      <main className="min-h-screen w-screen bg-[#f8f2e5] dark:bg-[#0f2a1d]">
+      <main className="min-h-screen bg-[#f8f2e5] dark:bg-[#0f2a1d]">
         <div className="container py-8">
           {/* Mobile Category Scroll */}
           <CategoryScroll
