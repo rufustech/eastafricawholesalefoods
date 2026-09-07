@@ -347,6 +347,29 @@
       "updatedAt": "2024-09-04T10:30:00Z"
     },
     {
+      "id": "prod_015b",
+      "name": "Nestle Nido",
+      "slug": "nestle_nido",
+      "category": "dry-goods",
+      "description": "Trusted milk powder for households, cafés, and food service.",
+      "images": [
+        {
+          "url": "/nestle_nido.jpg",
+          "alt": "Nestle Nido - Milk powder"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 26,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": []
+      },
+      "createdAt": "2024-01-25T10:30:00Z",
+      "updatedAt": "2024-09-04T10:30:00Z"
+    },
+    {
       "id": "prod_016",
       "name": "Samaki Sardines",
       "slug": "samaki_sardines",
@@ -400,8 +423,8 @@
       "description": "Pure, refined sunflower oil perfect for cooking and frying. Light and versatile.",
       "images": [
         {
-          "url": "/nestle_nido.jpg",
-          "alt": "Sunflower Oil - Cooking oil"
+          "url": "",
+          "alt": "Sunflower Oil - Cooking oil (Placeholder)"
         }
       ],
       "rating": 4.6,
@@ -446,8 +469,8 @@
       "description": "Nutritious sorghum flour for traditional and modern cooking. Ancient grain staple.",
       "images": [
         {
-          "url": "/agashya.png",
-          "alt": "Sorghum Flour - Ancient grain"
+          "url": "",
+          "alt": "Sorghum Flour - Ancient grain (Placeholder)"
         }
       ],
       "rating": 4.3,
@@ -515,8 +538,8 @@
       "description": "Specially formulated flour for perfect chapati flatbreads. Easy kneading and rolling.",
       "images": [
         {
-          "url": "/maganjo_maize_flour.jpg",
-          "alt": "Chapati Flour - Flatbread flour"
+          "url": "",
+          "alt": "Chapati Flour - Flatbread flour (Placeholder)"
         }
       ],
       "rating": 4.6,
@@ -538,8 +561,8 @@
       "description": "Rich, creamy coconut milk for curries and traditional dishes. Full-fat quality.",
       "images": [
         {
-          "url": "/blue_band.jpg",
-          "alt": "Coconut Milk - Canned dairy"
+          "url": "",
+          "alt": "Coconut Milk - Canned dairy (Placeholder)"
         }
       ],
       "rating": 4.7,
@@ -554,5 +577,5 @@
       "updatedAt": "2024-09-04T10:30:00Z"
     }
   ],
-  "total": 24
+  "total": 25
 }

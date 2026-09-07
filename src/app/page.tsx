@@ -178,7 +178,7 @@ export default function Home() {
             </div>
             <div className="sticky top-24">
               <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#d64b35]">
-                Browse Categories
+                Browse Organic Foods
               </h3>
               <div className="grid gap-3 sm:grid-cols-2">
                 {categories.slice(0, 8).map((category, index) => (
@@ -218,10 +218,10 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                href="/categories"
+                href="/products"
                 className="mt-4 block w-full text-center rounded-lg bg-[#1f633f] py-3 text-sm font-bold text-white hover:bg-[#174d30] transition-colors"
               >
-                View All Categories
+                View All Products
               </Link>
             </div>
           </div>
@@ -393,10 +393,10 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              href="/categories"
+              href="/products"
               className="hidden text-sm font-bold text-[#1f633f] hover:text-[#d64b35] sm:block"
             >
-              View all categories -&gt;
+              View all products -&gt;
             </Link>
           </div>
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">

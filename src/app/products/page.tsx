@@ -117,8 +117,15 @@ export default function ProductsPage() {
     <>
       <SiteHeader />
 
-      <main className="min-h-screen bg-[#f8f2e5] dark:bg-[#0f2a1d]">
-        <div className="container py-8">
+      <main className="min-h-screen bg-[#f8f2e5] dark:bg-linear-to-b dark:from-[#0f2a1d] dark:via-[#1c4030] dark:to-[#0a1f16] relative overflow-hidden">
+        {/* Decorative gradient blobs */}
+        <div className="hidden dark:block absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[#1f633f]/20 blur-3xl" />
+          <div className="absolute top-1/3 -left-20 w-96 h-96 rounded-full bg-[#2a5a47]/15 blur-3xl" />
+          <div className="absolute -bottom-20 right-1/3 w-80 h-80 rounded-full bg-[#1f633f]/10 blur-3xl" />
+        </div>
+
+        <div className="container py-8 relative z-10">
           {/* Mobile Category Scroll */}
           <CategoryScroll
             selectedCategory={selectedCategory}
@@ -131,7 +138,7 @@ export default function ProductsPage() {
               className="hidden lg:block lg:col-span-1"
               aria-label="Product filters"
             >
-              <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-neutral-700 sticky top-4">
+              <div className="bg-white dark:bg-[#1c4030] rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-[#2a5a47] sticky top-4">
                 {/* Search */}
                 <div>
                   <label
@@ -146,7 +153,7 @@ export default function ProductsPage() {
                     placeholder="Search by name, origin..."
                     value={searchQuery}
                     onChange={(e) => handleSearchChange(e.target.value)}
-                    className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-neutral-50 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] placeholder-neutral-500 dark:placeholder-[#b8d58e]/50 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     aria-describedby="search-help"
                   />
                   <p id="search-help" className="sr-only">
@@ -157,7 +164,7 @@ export default function ProductsPage() {
                 {/* Categories */}
                 <div>
                   <fieldset>
-                    <legend className="block text-sm font-semibold mb-3 text-neutral-900 dark:text-neutral-100">
+                    <legend className="block text-sm font-semibold mb-3 text-neutral-900 dark:text-[#f8f2e5]">
                       Categories
                     </legend>
                     <div className="space-y-2" role="group">
@@ -179,7 +186,7 @@ export default function ProductsPage() {
                           className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
                             selectedCategory === cat.slug
                               ? "bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 font-medium"
-                              : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                              : "text-neutral-700 dark:text-[#b8d58e] hover:bg-neutral-100 dark:hover:bg-[#1f633f]"
                           }`}
                           aria-pressed={selectedCategory === cat.slug}
                         >
@@ -197,7 +204,7 @@ export default function ProductsPage() {
                 <div>
                   <label
                     htmlFor="sort-select"
-                    className="block text-sm font-semibold mb-2 text-neutral-900 dark:text-neutral-100"
+                    className="block text-sm font-semibold mb-2 text-neutral-900 dark:text-[#f8f2e5]"
                   >
                     Sort By
                   </label>
@@ -207,7 +214,7 @@ export default function ProductsPage() {
                     onChange={(e) =>
                       handleSortChange(e.target.value as SortOption)
                     }
-                    className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-neutral-50 dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="name">Name (A-Z)</option>
                     <option value="rating">Rating (High to Low)</option>
@@ -216,8 +223,8 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Results Count */}
-                <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700">
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                <div className="pt-4 border-t border-neutral-200 dark:border-[#2a5a47]">
+                  <p className="text-xs text-neutral-600 dark:text-[#b8d58e]">
                     Showing{" "}
                     <span className="font-semibold">
                       {paginatedProducts.length}
@@ -232,8 +239,8 @@ export default function ProductsPage() {
             {/* Products Grid */}
             <div className="lg:col-span-3" id="products-section">
               {sorted.length === 0 ? (
-                <div className="bg-white dark:bg-neutral-800 rounded-lg p-12 text-center border border-neutral-200 dark:border-neutral-700">
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                <div className="bg-white dark:bg-[#1c4030] rounded-lg p-12 text-center border border-neutral-200 dark:border-[#2a5a47]">
+                  <p className="text-neutral-600 dark:text-[#b8d58e] mb-4">
                     No products found matching your criteria.
                   </p>
                   <button
@@ -259,11 +266,11 @@ export default function ProductsPage() {
                       <Link
                         key={product.id}
                         href={`/products/${product.slug}`}
-                        className="group flex flex-col h-full bg-white dark:bg-neutral-800 hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 focus-within:ring-2 focus-within:ring-primary-500"
+                        className="group flex flex-col h-full bg-white dark:bg-[#1c4030] hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-[#2a5a47] focus-within:ring-2 focus-within:ring-primary-500"
                         aria-label={`View ${product.name} details`}
                       >
                         {/* Product Image */}
-                        <div className="relative w-full aspect-square bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center p-6 overflow-hidden">
+                        <div className="relative w-full aspect-square bg-neutral-100 dark:bg-[#1f633f] flex items-center justify-center p-6 overflow-hidden">
                           <Image
                             src={
                               product.images[0]?.url ||
@@ -278,11 +285,11 @@ export default function ProductsPage() {
 
                         {/* Product Info */}
                         <div className="p-5 flex-1 flex flex-col">
-                          <h3 className="font-bold text-lg text-neutral-900 dark:text-neutral-100 mb-2 line-clamp-2">
+                          <h3 className="font-bold text-lg text-neutral-900 dark:text-[#f8f2e5] mb-2 line-clamp-2">
                             {product.name}
                           </h3>
 
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2 flex-1">
+                          <p className="text-sm text-neutral-600 dark:text-[#b8d58e] mb-4 line-clamp-2 flex-1">
                             {product.description}
                           </p>
 
@@ -293,7 +300,7 @@ export default function ProductsPage() {
                                 {"★".repeat(Math.round(product.rating))}
                                 {"☆".repeat(5 - Math.round(product.rating))}
                               </span>
-                              <span className="text-xs text-neutral-600 dark:text-neutral-400">
+                              <span className="text-xs text-neutral-600 dark:text-[#b8d58e]">
                                 {product.rating.toFixed(1)} (
                                 {product.reviews || 0})
                               </span>

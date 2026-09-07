@@ -7,15 +7,15 @@ export function SiteFooter() {
   return (
     <footer className="site-footer bg-[#173b2b] py-12 text-white">
       <div className="container">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
-          <div>
+        <div className="grid grid-cols-1 gap-10 text-center md:text-left md:grid-cols-4 md:gap-8">
+          <div className="flex justify-center md:block">
             <Image
               src="/eastafricawholesalefoodsLogo.png"
               alt="East Africa Wholesale Foods"
               width={240}
               height={96}
               quality={100}
-              className="h-auto w-60 object-contain object-left"
+              className="h-auto w-60 object-contain"
             />
           </div>
           <div>

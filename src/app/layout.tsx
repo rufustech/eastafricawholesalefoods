@@ -111,10 +111,10 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics */}
+        {/* Google Analytics - Update GA4_ID with your actual Google Analytics 4 ID */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -122,7 +122,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXX', { page_path: window.location.pathname });
+              gtag('config', 'G-YOUR_GA4_ID', { page_path: window.location.pathname });
             `,
           }}
         />
