@@ -10,12 +10,12 @@ import { ScrollRevealEffects } from "@/components/ScrollRevealEffects";
 export const metadata: Metadata = {
   title: "East Africa Wholesale Foods - Premium Quality Products",
   description:
-    "Premium wholesale foods supplier serving East Africa. High-quality dry goods, grains, frozen products, and spices from Kenya, Uganda, and Tanzania.",
+    "Premium wholesale foods supplier serving East Africa. High-quality dry foods, grains, frozen products, and spices from Kenya, Uganda, and Tanzania.",
   keywords: [
     "wholesale foods",
     "East Africa",
     "wholesale supplier",
-    "dry goods",
+    "dry foods",
     "frozen foods",
     "wholesale prices",
   ],

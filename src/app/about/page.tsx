@@ -76,8 +76,10 @@ export default function AboutPage() {
               Our Story
             </p>
             <h1 className="font-serif text-5xl font-bold tracking-tight md:text-6xl">
-              The short route from{" "}
-              <span className="text-[#d64b35]">farmers to your table.</span>
+              The direct route from{" "}
+              <span className="text-[#d64b35]">
+                African farmers to Canadian Businesses.
+              </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-[#d8e7c9]">
               East Africa Wholesale Foods connects 6,000+ certified organic

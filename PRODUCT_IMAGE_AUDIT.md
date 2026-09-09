@@ -36,7 +36,7 @@ These products were referencing incorrect image files. They have been updated to
 6. **Cassava Flour** → `/cassava_flour.jpg` ✓
 7. **Curry Powder** → `/curry_powder.jpg` ✓
 8. **Fanta Orange** → `/fanta.jpg` ✓
-9. **Green Beans** → `/greenbeans.jpg` ✓
+9. **Frozen Peas** → `/frozenpeas.jpg` ✓
 10. **Kinazi Cassava Flour** → `/kinazi_cassava_flour.jpg` ✓
 11. **Kisubi Tea** → `/kisubi_tea.jpg` ✓
 12. **Maganjo Maize Flour** → `/maganjo_maize_flour.jpg` ✓
@@ -47,7 +47,7 @@ These products were referencing incorrect image files. They have been updated to
 17. **Samaki Sardines** → `/talapia_fish.jpg` ✓
 18. **Sukuma Wiki** → `/sosoma1.jpg` ✓
 19. **Pilipili (Hot Pepper Sauce)** → `/salsa.jpg` ✓
-20. **Mandazi Mix** → `/royco_mchuzi_mix.jpg` ✓
+20. **Royco Mchuzi Mix** → `/royco_mchuzi_mix.jpg` ✓
 21. **Githeri Mix** → `/yellow_corn.jpg` ✓
 
 ### 🎨 Products with Placeholder Images (4 products)

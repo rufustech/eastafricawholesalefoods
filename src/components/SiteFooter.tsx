@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const linkClass = "text-[#d64b35] transition-colors hover:text-[#f5b3a6]";
+const linkClass = "text-white transition-colors hover:text-gray-200";
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer bg-[#173b2b] py-12 text-white">
+    <footer className="site-footer bg-green-900 py-12 text-white">
       <div className="container">
         <div className="grid grid-cols-1 gap-10 text-center md:text-left md:grid-cols-4 md:gap-8">
           <div className="flex justify-center md:block">

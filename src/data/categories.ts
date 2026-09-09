@@ -38,8 +38,8 @@ export const categories: Category[] = [
   },
   {
     id: "cat-004",
-    name: "Dry Goods",
-    slug: "dry-goods",
+    name: "Dry Foods",
+    slug: "dry-foods",
     description: "Dried staples including nuts, seeds, and dried fruits",
     icon: "🥜",
   },

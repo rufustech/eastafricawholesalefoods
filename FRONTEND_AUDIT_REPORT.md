@@ -509,11 +509,11 @@ In `src/data/categories.ts`:
 
 ```typescript
 export const categories: Category[] = [
-  { id: "dry-goods", name: "Dry Goods", slug: "dry-goods", icon: "🌾" },
+  { id: "dry-foods", name: "Dry Foods", slug: "dry-foods", icon: "🌾" },
   {
     id: "frozen-foods",
     name: "Frozen Foods",
-    slug: "frozen-foods",
+    slug: "f
     icon: "❄️",
   },
   { id: "beverages", name: "Beverages", slug: "beverages", icon: "🥤" },

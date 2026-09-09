@@ -72,14 +72,14 @@
     },
     {
       "id": "prod_004",
-      "name": "Bananas",
-      "slug": "bananas",
+      "name": "Organic Frozen Matooke",
+      "slug": "matooke",
       "category": "fresh-produce",
-      "description": "Sweet, versatile bananas selected for quality and freshness. Perfect for cooking or fresh consumption.",
+      "description": "Sweet, versatile organic matooke selected for quality and freshness. Perfect for cooking or fresh consumption.",
       "images": [
         {
-          "url": "/bananas.jpg",
-          "alt": "Fresh Bananas - Premium quality"
+          "url": "/organic_frozen_matooke.png",
+          "alt": "Fresh Matooke - Premium quality"
         }
       ],
       "rating": 4.6,
@@ -87,7 +87,7 @@
       "inventory": "In Inventory",
       "specs": {
         "origin": "East Africa",
-        "storageCondition": "Room temperature",
+        "storageCondition": "Frozen",
         "certification": ["fresh"]
       },
       "createdAt": "2024-01-05T10:30:00Z",
@@ -187,14 +187,14 @@
     },
     {
       "id": "prod_009",
-      "name": "Green Beans",
-      "slug": "green_beans",
+      "name": "Frozen Peas",
+      "slug": "green_peas",
       "category": "frozen-vegetables",
-      "description": "Crisp green beans prepared for quick, convenient cooking. Flash-frozen for quality.",
+      "description": "Crisp frozen peas prepared for quick, convenient cooking. Flash-frozen for quality.",
       "images": [
         {
-          "url": "/greenbeans.jpg",
-          "alt": "Green Beans - Frozen vegetable"
+          "url": "/frozen_peas.jpg",
+          "alt": "Frozen Peas - Frozen vegetable"
         }
       ],
       "rating": 4.4,
@@ -486,14 +486,14 @@
     },
     {
       "id": "prod_021",
-      "name": "Mandazi Mix",
-      "slug": "mandazi_mix",
-      "category": "baking-mixes",
-      "description": "Pre-made mix for traditional mandazi doughnuts. Easy and convenient.",
+      "name": "Royco Mchuzi Mix",
+      "slug": "royco_mchuzi_mix",
+      "category": "spices",
+      "description": "Savory seasoning mix for richer stews, sauces, and everyday cooking.",
       "images": [
         {
           "url": "/royco_mchuzi_mix.jpg",
-          "alt": "Mandazi Mix - Baking convenience"
+          "alt": "Royco Mchuzi Mix - Spices"
         }
       ],
       "rating": 4.4,

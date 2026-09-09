@@ -139,6 +139,28 @@ export default function ProductsPage() {
               aria-label="Product filters"
             >
               <div className="bg-white dark:bg-[#1c4030] rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-[#2a5a47] sticky top-4">
+                {/* Sort */}
+                <div>
+                  <label
+                    htmlFor="sort-select"
+                    className="block text-sm font-semibold mb-2 text-neutral-900 dark:text-[#f8f2e5]"
+                  >
+                    Sort By
+                  </label>
+                  <select
+                    id="sort-select"
+                    value={sortBy}
+                    onChange={(e) =>
+                      handleSortChange(e.target.value as SortOption)
+                    }
+                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] focus:ring-2 focus:ring-primary-500"
+                  >
+                    <option value="name">Name (A-Z)</option>
+                    <option value="rating">Rating (High to Low)</option>
+                    <option value="newest">Newest First</option>
+                  </select>
+                </div>
+
                 {/* Search */}
                 <div>
                   <label
@@ -198,28 +220,6 @@ export default function ProductsPage() {
                       ))}
                     </div>
                   </fieldset>
-                </div>
-
-                {/* Sort */}
-                <div>
-                  <label
-                    htmlFor="sort-select"
-                    className="block text-sm font-semibold mb-2 text-neutral-900 dark:text-[#f8f2e5]"
-                  >
-                    Sort By
-                  </label>
-                  <select
-                    id="sort-select"
-                    value={sortBy}
-                    onChange={(e) =>
-                      handleSortChange(e.target.value as SortOption)
-                    }
-                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] focus:ring-2 focus:ring-primary-500"
-                  >
-                    <option value="name">Name (A-Z)</option>
-                    <option value="rating">Rating (High to Low)</option>
-                    <option value="newest">Newest First</option>
-                  </select>
                 </div>
 
                 {/* Results Count */}

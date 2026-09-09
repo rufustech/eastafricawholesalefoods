@@ -41,10 +41,11 @@ const catalog: ProductSeed[] = [
     origin: "East Africa",
   },
   {
-    name: "Bananas",
-    image: "bananas.jpg",
+    name: "Organic Frozen Matooke",
+    image: "organic_frozen_matooke.png",
     category: "dry-goods",
-    description: "Sweet, versatile bananas selected for quality and freshness.",
+    description:
+      "Sweet, versatile organic matooke selected for quality and freshness.",
     price: 3.99,
     unit: "per bunch",
     origin: "East Africa",
@@ -88,10 +89,10 @@ const catalog: ProductSeed[] = [
     origin: "East Africa",
   },
   {
-    name: "Green Beans",
-    image: "greenbeans.jpg",
+    name: "Frozen Peas",
+    image: "frozen_peas.jpg",
     category: "frozen-vegetables",
-    description: "Crisp green beans prepared for quick, convenient cooking.",
+    description: "Crisp Frozen Peas prepared for quick, convenient cooking.",
     price: 4.99,
     unit: "per pack",
     origin: "East Africa",
