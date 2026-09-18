@@ -14,7 +14,7 @@ const catalog: ProductSeed[] = [
   // Flours & Grains
   {
     name: "Cassava Flour",
-    image: "Cassava_Flour.jpg",
+    image: "Cassava_Flour.png",
     category: "flours-grains",
     description:
       "Fine cassava flour for baking, thickening, and traditional dishes. Perfect for everyday cooking.",

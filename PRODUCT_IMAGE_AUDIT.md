@@ -33,11 +33,11 @@ These products were referencing incorrect image files. They have been updated to
 3. **Ala Damiano Cassava Leaves** → `/ala_damiano_cassava_leaves.jpg` ✓
 4. **Bananas** → `/bananas.jpg` ✓
 5. **Blue Band** → `/blue_band.jpg` ✓
-6. **Cassava Flour** → `/cassava_flour.jpg` ✓
+6. **Cassava Flour** → `/Cassava_Flour.png` ✓
 7. **Curry Powder** → `/curry_powder.jpg` ✓
 8. **Fanta Orange** → `/fanta.jpg` ✓
 9. **Frozen Peas** → `/frozenpeas.jpg` ✓
-10. **Kinazi Cassava Flour** → `/kinazi_cassava_flour.jpg` ✓
+10. **Kinazi Cassava Flour** → `/kinazi_Cassava_Flour.png` ✓
 11. **Kisubi Tea** → `/kisubi_tea.jpg` ✓
 12. **Maganjo Maize Flour** → `/maganjo_maize_flour.jpg` ✓
 13. **Millet Karo** → `/millet_karo.jpg` ✓
@@ -73,12 +73,12 @@ All images are properly stored in `/public/`:
 - ✓ ala_damiano_cassava_leaves.jpg
 - ✓ bananas.jpg
 - ✓ blue_band.jpg
-- ✓ cassava_flour.jpg
+- ✓ Cassava_Flour.png
 - ✓ curry_powder.jpg
 - ✓ eastafricawholesalefoodsLogo.png (Fallback/Placeholder)
 - ✓ fanta.jpg
 - ✓ greenbeans.jpg
-- ✓ kinazi_cassava_flour.jpg
+- ✓ kinazi_Cassava_Flour.png
 - ✓ kisubi_tea.jpg
 - ✓ maganjo_maize_flour.jpg
 - ✓ millet_karo.jpg
