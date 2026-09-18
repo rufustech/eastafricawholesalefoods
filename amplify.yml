@@ -8,11 +8,14 @@ frontend:
     build:
       commands:
         - printf 'NEXT_PUBLIC_ADMIN_PASSWORD="%s"\n' "$ADMIN_PASSWORD" >> .env.production
+        - printf 'GMAIL_USER="%s"\n' "$GMAIL_USER" >> .env.production
+        - printf 'GMAIL_APP_PASSWORD="%s"\n' "$GMAIL_APP_PASSWORD" >> .env.production
+        - printf 'CONTACT_EMAIL_RECIPIENT="%s"\n' "$CONTACT_EMAIL_RECIPIENT" >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - .next/cache/**/*
