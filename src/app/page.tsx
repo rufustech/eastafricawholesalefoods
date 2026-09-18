@@ -257,12 +257,24 @@ export default function Home() {
                   className="group overflow-hidden rounded-3xl bg-[#f8f2e5] text-[#173b2b] transition-all hover:-translate-y-2 hover:shadow-2xl"
                 >
                   <div
-                    className={`relative flex aspect-square items-center justify-center ${productColors[index % productColors.length]}`}
+                    className={`relative aspect-square overflow-hidden bg-linear-to-br ${productColors[index % productColors.length]}`}
                   >
-                    <span className="font-serif text-7xl font-bold text-[#1f633f]/20">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="absolute bottom-4 left-4 rounded-full bg-[#fbf7ee]/80 px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
+                    {product.images && product.images[0] ? (
+                      <Image
+                        src={product.images[0].url}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-6"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="font-serif text-7xl font-bold text-[#1f633f]/20">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                    )}
+                    <span className="absolute bottom-4 left-4 rounded-full bg-[#fbf7ee]/90 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#173b2b] backdrop-blur-sm z-10">
                       In stock
                     </span>
                   </div>
@@ -270,12 +282,24 @@ export default function Home() {
                     <p className="text-xs font-bold uppercase tracking-widest text-[#d64b35]">
                       {product.category.replace("-", " ")}
                     </p>
-                    <h3 className="mt-2 line-clamp-1 font-serif text-xl font-bold">
+                    <h3 className="mt-2 line-clamp-2 font-serif text-lg font-bold">
                       {product.name}
                     </h3>
-                    <div className="mt-5 flex items-center justify-between">
+                    <div className="mt-4 flex items-baseline gap-2">
+                      {product.pricing?.retail && (
+                        <span className="text-sm font-bold text-[#d64b35]">
+                          ${product.pricing.retail.amount}
+                        </span>
+                      )}
+                      {product.pricing?.wholesale && (
+                        <span className="text-xs text-[#365b48] line-through">
+                          ${product.pricing.wholesale.amount}
+                        </span>
+                      )}
+                    </div>
+                    <div className="mt-4 flex items-center justify-between">
                       <span className="text-sm font-bold text-[#d64b35]">
-                        Get Quote
+                        View Details
                       </span>
                       <span className="grid h-9 w-9 place-items-center rounded-full bg-[#1f633f] text-white transition-transform group-hover:-rotate-45">
                         →

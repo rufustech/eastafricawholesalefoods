@@ -96,9 +96,10 @@ export const categories: Category[] = [
   },
   {
     id: "cat-012",
-    name: "Canned Fish",
-    slug: "canned-fish",
-    description: "Sardines, mackerel, and other canned seafood",
+    name: "Frozen & Canned Fish",
+    slug: "frozen-canned-fish",
+    description:
+      "Frozen and canned seafood including tilapia, anchovies, and smoked fish",
     icon: "🐟",
   },
   {

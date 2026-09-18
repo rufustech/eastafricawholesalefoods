@@ -11,201 +11,514 @@ type ProductSeed = {
 };
 
 const catalog: ProductSeed[] = [
-  {
-    name: "Agashya",
-    image: "agashya.png",
-    category: "dry-goods",
-    description: "Authentic East African pantry favourite for everyday meals.",
-    price: 4.99,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Akabanga Chilli Oil",
-    image: "akabanga_chilli_oil.jpg",
-    category: "spices",
-    description:
-      "A vibrant chilli oil that brings depth and heat to every dish.",
-    price: 6.99,
-    unit: "per bottle",
-    origin: "Rwanda",
-  },
-  {
-    name: "Ala Damiano Cassava Leaves",
-    image: "ala_damiano_cassava_leaves.jpg",
-    category: "frozen-vegetables",
-    description:
-      "Carefully prepared cassava leaves, ready for traditional recipes.",
-    price: 5.99,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Organic Frozen Matooke",
-    image: "organic_frozen_matooke.png",
-    category: "dry-goods",
-    description:
-      "Sweet, versatile organic matooke selected for quality and freshness.",
-    price: 3.99,
-    unit: "per bunch",
-    origin: "East Africa",
-  },
-  {
-    name: "Blue Band",
-    image: "blue_band.jpg",
-    category: "dry-goods",
-    description: "A smooth everyday spread for breakfast, baking, and cooking.",
-    price: 4.49,
-    unit: "per tub",
-    origin: "East Africa",
-  },
+  // Flours & Grains
   {
     name: "Cassava Flour",
-    image: "cassava_flour.jpg",
+    image: "Cassava_Flour.jpg",
     category: "flours-grains",
     description:
-      "Fine cassava flour for baking, thickening, and traditional dishes.",
+      "Fine cassava flour for baking, thickening, and traditional dishes. Perfect for everyday cooking.",
     price: 3.49,
     unit: "per kg",
     origin: "East Africa",
   },
   {
-    name: "Curry Powder",
-    image: "curry_powder.jpg",
-    category: "spices",
-    description: "A balanced aromatic blend for curries, stews, and marinades.",
-    price: 5.49,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Fanta",
-    image: "fanta.jpg",
-    category: "beverages",
-    description:
-      "Bright, refreshing fruit soda for shops, restaurants, and events.",
-    price: 1.49,
-    unit: "per bottle",
-    origin: "East Africa",
-  },
-  {
-    name: "Frozen Peas",
-    image: "frozen_peas.jpg",
-    category: "frozen-vegetables",
-    description: "Crisp Frozen Peas prepared for quick, convenient cooking.",
-    price: 4.99,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Kinazi Cassava Flour",
-    image: "kinazi_cassava_flour.jpg",
+    name: "Corn Meal 10kg",
+    image: "Corn_Meal_10kg.jpg",
     category: "flours-grains",
     description:
-      "Quality cassava flour with a smooth texture for home and professional kitchens.",
-    price: 3.99,
-    unit: "per kg",
-    origin: "Rwanda",
-  },
-  {
-    name: "Kisubi Tea",
-    image: "kisubi_tea.jpg",
-    category: "beverages",
-    description: "Rich, comforting tea selected for a full-bodied daily cup.",
-    price: 7.99,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Maganjo Maize Flour",
-    image: "maganjo_maize_flour.jpg",
-    category: "flours-grains",
-    description:
-      "Fine maize flour for ugali, porridge, baking, and family meals.",
-    price: 2.99,
-    unit: "per kg",
-    origin: "Uganda",
-  },
-  {
-    name: "Millet Karo",
-    image: "millet_karo.jpg",
-    category: "flours-grains",
-    description: "Wholesome millet staple with a naturally nutty flavour.",
-    price: 4.49,
-    unit: "per pack",
-    origin: "East Africa",
-  },
-  {
-    name: "Mochaberry Coffee",
-    image: "mochaberry_coffee.jpg",
-    category: "beverages",
-    description: "A fragrant coffee blend made for a rich, smooth brew.",
+      "Premium quality corn meal in bulk. Ideal for ugali, porridge, and baking needs.",
     price: 12.99,
-    unit: "per pack",
+    unit: "per 10kg",
     origin: "East Africa",
   },
   {
-    name: "Nestle Cerelac",
-    image: "nestle_cerelac.jpg",
+    name: "Corn Meal 2kg",
+    image: "Corn_Meal_2kg.jpg",
+    category: "flours-grains",
+    description:
+      "High-quality corn meal for family cooking and food service preparation.",
+    price: 3.49,
+    unit: "per 2kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Corn Meal 5kg",
+    image: "Corn_Meal_5kg.jpg",
+    category: "flours-grains",
+    description:
+      "Convenient 5kg portion of nutritious corn meal for regular household use.",
+    price: 7.49,
+    unit: "per 5kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Fermented Sorghum Flour",
+    image: "Fermented_Sorghum_Flour.jpg",
+    category: "flours-grains",
+    description:
+      "Traditional fermented sorghum flour with enhanced nutritional value and digestibility.",
+    price: 4.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Maize Flour 10kg",
+    image: "Maize_Flour_10kg.jpg",
+    category: "flours-grains",
+    description:
+      "Bulk maize flour for professional kitchens and large families. Fine, consistent texture.",
+    price: 11.99,
+    unit: "per 10kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Maize Flour 5kg",
+    image: "Maize_Flour_5kg.jpg",
+    category: "flours-grains",
+    description:
+      "Quality maize flour for ugali, porridge, and traditional meals. Versatile staple.",
+    price: 6.99,
+    unit: "per 5kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Maize Flour 2kg",
+    image: "Maize_Flower_2kg.jpg",
+    category: "flours-grains",
+    description:
+      "Small pack maize flour perfect for home baking and everyday cooking needs.",
+    price: 3.29,
+    unit: "per 2kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Millet Flour",
+    image: "Millet_Flour.jpg",
+    category: "flours-grains",
+    description:
+      "Wholesome millet flour with naturally nutty flavor. Gluten-free alternative grain.",
+    price: 4.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Mixed Porridge Flour",
+    image: "Mixed_Porridge_Flour.jpg",
+    category: "flours-grains",
+    description:
+      "Multi-grain porridge flour blend for nutritious breakfast and family meals.",
+    price: 4.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Red Sorghum Flour",
+    image: "Red_Sorghum_Flour.jpg",
+    category: "flours-grains",
+    description:
+      "Rich red sorghum flour packed with nutrients and traditional flavor for authentic recipes.",
+    price: 5.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Roasted Peanut Flour",
+    image: "Roasted_Peanut_Flour.jpg",
+    category: "flours-grains",
+    description:
+      "Delicious roasted peanut flour for baking, sauces, and protein-rich dishes.",
+    price: 5.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+
+  // Legumes & Beans
+  {
+    name: "Peanut Beans",
+    image: "Peanut_Beans.jpg",
+    category: "legumes-beans",
+    description:
+      "Protein-rich peanut beans for stews, curries, and traditional legume dishes.",
+    price: 4.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Red Beans",
+    image: "Red_Beans.jpg",
+    category: "legumes-beans",
+    description:
+      "Premium red beans loaded with fiber and nutrients for hearty family meals.",
+    price: 5.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Yellow Beans 10kg",
+    image: "Yellow_Beans_10kg.jpg",
+    category: "legumes-beans",
+    description:
+      "Bulk yellow beans for restaurants and large-scale cooking operations.",
+    price: 24.99,
+    unit: "per 10kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Yellow Beans 2kg",
+    image: "Yellow_Beans_2kg.jpg",
+    category: "legumes-beans",
+    description:
+      "Quality yellow beans in convenient 2kg pack for family cooking.",
+    price: 5.99,
+    unit: "per 2kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Yellow Beans 5kg",
+    image: "Yellow_Beans_5kg.jpg",
+    category: "legumes-beans",
+    description:
+      "Mid-sized pack of yellow beans for regular household and food business use.",
+    price: 13.99,
+    unit: "per 5kg",
+    origin: "East Africa",
+  },
+
+  // Rice & Cereals
+  {
+    name: "Tanzania Rice 10kg",
+    image: "Tanzania_Rice_10kg.jpg",
+    category: "rice-cereals",
+    description:
+      "Premium Tanzanian rice in bulk. Perfect for restaurants and large families.",
+    price: 19.99,
+    unit: "per 10kg",
+    origin: "Tanzania",
+  },
+  {
+    name: "Tanzania Rice 2kg",
+    image: "Tanzania_Rice_2kg.jpg",
+    category: "rice-cereals",
+    description:
+      "High-quality Tanzanian rice for everyday meals and special occasions.",
+    price: 4.99,
+    unit: "per 2kg",
+    origin: "Tanzania",
+  },
+  {
+    name: "Tanzania Rice 5kg",
+    image: "Tanzania_Rice_5kg.jpg",
+    category: "rice-cereals",
+    description:
+      "Mid-sized pack of authentic Tanzanian rice with excellent taste and texture.",
+    price: 11.99,
+    unit: "per 5kg",
+    origin: "Tanzania",
+  },
+
+  // Dry Foods & Nuts
+  {
+    name: "Roasted Organic Peanuts",
+    image: "Roasted_Organic_Peanuts.jpg",
     category: "dry-goods",
-    description: "Convenient nutrition for growing families.",
-    price: 8.99,
-    unit: "per box",
+    description:
+      "Delicious roasted organic peanuts perfect for snacking and cooking.",
+    price: 6.99,
+    unit: "per kg",
     origin: "East Africa",
   },
   {
-    name: "Nestle Nido",
-    image: "nestle_nido.jpg",
+    name: "Peanut Flour",
+    image: "Peanut_Flour.jpg",
     category: "dry-goods",
-    description: "Trusted milk powder for households, cafés, and food service.",
-    price: 14.99,
-    unit: "per tin",
+    description:
+      "Nutrient-rich peanut flour for sauces, baking, and protein supplementation.",
+    price: 5.49,
+    unit: "per kg",
     origin: "East Africa",
   },
+
+  // Spices & Seasonings
   {
-    name: "Royco Mchuzi Mix",
-    image: "royco_mchuzi_mix.jpg",
+    name: "African Black Salt",
+    image: "African_Black_Salt.jpg",
     category: "spices",
     description:
-      "Savory seasoning mix for richer stews, sauces, and everyday cooking.",
-    price: 3.99,
-    unit: "per pack",
+      "Traditional African black salt with rich mineral content for authentic seasoning.",
+    price: 4.99,
+    unit: "per 500g",
     origin: "East Africa",
   },
   {
-    name: "Salsa",
-    image: "salsa.jpg",
+    name: "Green Clay",
+    image: "Green_Clay.jpg",
     category: "spices",
-    description: "Fresh-tasting salsa for snacks, sides, and quick service.",
-    price: 5.99,
-    unit: "per jar",
+    description:
+      "Natural green clay for wellness, beauty, and traditional health practices.",
+    price: 6.99,
+    unit: "per kg",
     origin: "East Africa",
   },
   {
-    name: "Sosoma",
-    image: "sosoma1.jpg",
-    category: "flours-grains",
-    description: "A dependable East African staple for everyday cooking.",
-    price: 4.49,
-    unit: "per pack",
+    name: "Stinging Nettle",
+    image: "Stinging_Nettle.jpg",
+    category: "spices",
+    description:
+      "Dried stinging nettle leaves for herbal tea and traditional medicinal use.",
+    price: 7.99,
+    unit: "per 500g",
     origin: "East Africa",
   },
   {
-    name: "Tilapia Fish",
-    image: "talapia_fish.jpg",
+    name: "Activated Charcoal Powder",
+    image: "Activated_Charcoal_Powder.jpg",
+    category: "spices",
+    description:
+      "Pure activated charcoal powder for wellness, detoxification, and health benefits.",
+    price: 8.99,
+    unit: "per 500g",
+    origin: "East Africa",
+  },
+
+  // Cooking Oils & Fats
+  {
+    name: "African Palm Oil 3L",
+    image: "African_Palm_Oil_3L.jpg",
+    category: "oils-fats",
+    description:
+      "Rich, authentic African palm oil in convenient 3L container for cooking.",
+    price: 8.99,
+    unit: "per 3L",
+    origin: "East Africa",
+  },
+  {
+    name: "African Palm Oil 3L Premium",
+    image: "African_Palm_Oil_3L_2.jpg",
+    category: "oils-fats",
+    description:
+      "Premium quality African palm oil for traditional and contemporary cuisine.",
+    price: 9.99,
+    unit: "per 3L",
+    origin: "East Africa",
+  },
+  {
+    name: "African Palm Oil 5L",
+    image: "African_Palm_Oil_5L.jpg",
+    category: "oils-fats",
+    description:
+      "Bulk African palm oil in 5L size for restaurants and food businesses.",
+    price: 13.99,
+    unit: "per 5L",
+    origin: "East Africa",
+  },
+  {
+    name: "African Palm Oil 5L Plus",
+    image: "African_Palm_Oil_5L_2.jpg",
+    category: "oils-fats",
+    description:
+      "Extra virgin African palm oil for demanding culinary and commercial applications.",
+    price: 15.99,
+    unit: "per 5L",
+    origin: "East Africa",
+  },
+
+  // Frozen Vegetables
+  {
+    name: "Frozen Cassava",
+    image: "Frozen_Cassava.jpg",
     category: "frozen-vegetables",
     description:
-      "Quality tilapia prepared for convenient cooking and food service.",
+      "Flash-frozen cassava prepared and ready for convenient cooking.",
+    price: 5.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Chopped Pumpkin",
+    image: "Frozen_Chopped_Pumpkin.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Pre-chopped frozen pumpkin for soups, stews, and traditional vegetable dishes.",
+    price: 4.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Fresh Beans",
+    image: "Frozen_Fresh_Beans.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Crisp frozen beans packed with nutrients for quick and easy meal preparation.",
+    price: 5.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Fresh Cooked Maize",
+    image: "Frozen_Fresh_Cooked_Maize.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Pre-cooked frozen maize ready to heat and serve for convenience.",
+    price: 4.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Green Cassava Leaves",
+    image: "Frozen_Green_Cassava_Leaves.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Nutritious frozen cassava leaves for authentic African cooking and stews.",
+    price: 6.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Green Peas",
+    image: "Frozen_Green_Peas.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Tender frozen peas perfect for sides, soups, and mixed vegetable dishes.",
+    price: 4.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Peeled Fresh Banana",
+    image: "Frozen_Peeled_Fresh_Banana.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Pre-peeled frozen bananas for smoothies, cooking, and convenient use.",
+    price: 5.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Sweet Potato",
+    image: "Frozen_Sweet_Potato.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Nutritious frozen sweet potato ready for quick preparation in any meal.",
+    price: 5.49,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Frozen Yams",
+    image: "Frozen_Yams.jpg",
+    category: "frozen-vegetables",
+    description:
+      "Quality frozen yams prepared and ready for traditional and modern recipes.",
+    price: 6.99,
+    unit: "per kg",
+    origin: "East Africa",
+  },
+
+  // Canned Fish & Seafood
+  {
+    name: "Salted Tilapia 1kg",
+    image: "Salted_Tilapia_1kg.jpg",
+    category: "frozen-canned-fish",
+    description:
+      "Premium salted tilapia in small pack for family meals and food preparation.",
+    price: 8.99,
+    unit: "per 1kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Salted Tilapia 10kg",
+    image: "Salted_Tilapia_10kg.jpg",
+    category: "frozen-canned-fish",
+    description:
+      "Bulk salted tilapia for restaurants, food businesses, and large-scale cooking.",
+    price: 59.99,
+    unit: "per 10kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Smoked Nile Perch",
+    image: "Smoked_Nile_Perch.jpg",
+    category: "frozen-canned-fish",
+    description:
+      "Delicious smoked Nile perch with authentic flavor for traditional dishes.",
     price: 14.99,
     unit: "per kg",
     origin: "East Africa",
   },
   {
-    name: "Yellow Corn",
-    image: "yellow_corn.jpg",
-    category: "flours-grains",
-    description: "Golden corn selected for consistent quality and flavour.",
-    price: 3.49,
+    name: "Smoked Tilapia 10kg",
+    image: "Smoked_Tilapia_10kg.jpg",
+    category: "frozen-canned-fish",
+    description:
+      "Bulk smoked tilapia for professional kitchens and wholesale operations.",
+    price: 64.99,
+    unit: "per 10kg",
+    origin: "East Africa",
+  },
+  {
+    name: "Sun Dried Anchovies",
+    image: "Sun_Dried_Anchovies.jpg",
+    category: "frozen-canned-fish",
+    description:
+      "Traditional sun-dried anchovies for authentic flavoring and nutritious meals.",
+    price: 9.99,
+    unit: "per 500g",
+    origin: "East Africa",
+  },
+
+  // Dairy & Spreads
+  {
+    name: "Tasty Peanut Butter",
+    image: "Tasty_Peanut_Butter.jpg",
+    category: "dairy-spreads",
+    description:
+      "Creamy peanut butter for breakfast, snacking, and culinary applications.",
+    price: 6.99,
+    unit: "per 500g",
+    origin: "East Africa",
+  },
+
+  // Beverages & Drinks
+  {
+    name: "Bee Honey",
+    image: "Bee_Honey.jpg",
+    category: "beverages",
+    description:
+      "Pure natural bee honey for health, sweetening, and traditional remedies.",
+    price: 12.99,
+    unit: "per 500g",
+    origin: "East Africa",
+  },
+  {
+    name: "Concentrated Passion Juice",
+    image: "Concerntrated_Passion_Juice.jpg",
+    category: "beverages",
+    description:
+      "Rich concentrated passion fruit juice for refreshing drinks and recipes.",
+    price: 7.99,
+    unit: "per 1L",
+    origin: "East Africa",
+  },
+
+  // Baking & Specialty Items
+  {
+    name: "Chapati",
+    image: "Chapati.jpg",
+    category: "baking-mixes",
+    description:
+      "Traditional chapati bread ready to cook for quick family meals.",
+    price: 3.99,
+    unit: "per pack",
+    origin: "East Africa",
+  },
+  {
+    name: "Soy Bean Flour",
+    image: "Soy_Bean_Flower.jpg",
+    category: "specialty",
+    description:
+      "Nutritious soy bean flour for baking, cooking, and protein enrichment.",
+    price: 5.49,
     unit: "per kg",
     origin: "East Africa",
   },

@@ -2,129 +2,14 @@
   "success": true,
   "data": [
     {
-      "id": "prod_001",
-      "name": "Agashya",
-      "slug": "agashya",
-      "category": "dry-goods",
-      "description": "Authentic East African pantry favourite for everyday meals. Rich in nutrients and traditional flavour.",
-      "images": [
-        {
-          "url": "/agashya.jpg",
-          "alt": "Agashya - Traditional East African staple"
-        }
-      ],
-      "rating": 4.5,
-      "reviews": 12,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": ["traditional"]
-      },
-      "createdAt": "2024-01-15T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_002",
-      "name": "Akabanga Chilli Oil",
-      "slug": "akabanga_chilli_oil",
-      "category": "spices-seasonings",
-      "description": "A vibrant chilli oil that brings depth and heat to every dish. Premium quality, cold-pressed.",
-      "images": [
-        {
-          "url": "/akabanga_chilli_oil.jpg",
-          "alt": "Akabanga Chilli Oil - Premium spice blend"
-        }
-      ],
-      "rating": 4.8,
-      "reviews": 28,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "Rwanda",
-        "storageCondition": "Cool location, sealed container",
-        "certification": ["traditional", "artisan"]
-      },
-      "createdAt": "2024-02-20T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_003",
-      "name": "Ala Damiano Cassava Leaves",
-      "slug": "ala_damiano_cassava_leaves",
-      "category": "frozen-vegetables",
-      "description": "Carefully prepared cassava leaves, ready for traditional recipes. Nutrient-rich and convenient.",
-      "images": [
-        {
-          "url": "/ala_damiano_cassava_leaves.jpg",
-          "alt": "Ala Damiano Cassava Leaves - Frozen vegetable"
-        }
-      ],
-      "rating": 4.3,
-      "reviews": 15,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Frozen, -18°C",
-        "certification": ["frozen"]
-      },
-      "createdAt": "2024-02-10T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_004",
-      "name": "Organic Frozen Matooke",
-      "slug": "matooke",
-      "category": "fresh-produce",
-      "description": "Sweet, versatile organic matooke selected for quality and freshness. Perfect for cooking or fresh consumption.",
-      "images": [
-        {
-          "url": "/organic_frozen_matooke.png",
-          "alt": "Fresh Matooke - Premium quality"
-        }
-      ],
-      "rating": 4.6,
-      "reviews": 34,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Frozen",
-        "certification": ["fresh"]
-      },
-      "createdAt": "2024-01-05T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_005",
-      "name": "Blue Band",
-      "slug": "blue_band",
-      "category": "dairy-spreads",
-      "description": "A smooth everyday spread for breakfast, baking, and cooking. Versatile and reliable.",
-      "images": [
-        {
-          "url": "/blue_band.jpg",
-          "alt": "Blue Band - Dairy spread"
-        }
-      ],
-      "rating": 4.4,
-      "reviews": 22,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": []
-      },
-      "createdAt": "2024-01-20T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_006",
+      "id": "cassava_flour",
       "name": "Cassava Flour",
       "slug": "cassava_flour",
       "category": "flours-grains",
-      "description": "Fine cassava flour for baking, thickening, and traditional dishes. Gluten-free option.",
+      "description": "Fine cassava flour for baking, thickening, and traditional dishes. Perfect for everyday cooking.",
       "images": [
         {
-          "url": "/cassava_flour.jpg",
+          "url": "/Cassava_Flour.jpg",
           "alt": "Cassava Flour - Premium grain product"
         }
       ],
@@ -134,205 +19,21 @@
       "specs": {
         "origin": "East Africa",
         "storageCondition": "Cool, dry place",
-        "certification": ["gluten-free"]
+        "certification": ["quality checked"]
       },
-      "createdAt": "2024-02-12T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
+      "createdAt": "2024-09-01T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
     },
     {
-      "id": "prod_007",
-      "name": "Curry Powder",
-      "slug": "curry_powder",
-      "category": "spices-seasonings",
-      "description": "A balanced aromatic blend for curries, stews, and marinades. Made from premium spices.",
-      "images": [
-        {
-          "url": "/curry_powder.jpg",
-          "alt": "Curry Powder - Spice blend"
-        }
-      ],
-      "rating": 4.7,
-      "reviews": 31,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Airtight container",
-        "certification": ["traditional"]
-      },
-      "createdAt": "2024-01-25T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_008",
-      "name": "Fanta Orange",
-      "slug": "fanta_orange",
-      "category": "soft-drinks",
-      "description": "Bright, refreshing fruit soda for shops, restaurants, and events. Popular classic flavour.",
-      "images": [
-        {
-          "url": "/fanta.jpg",
-          "alt": "Fanta Orange - Refreshing beverage"
-        }
-      ],
-      "rating": 4.2,
-      "reviews": 19,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Room temperature or refrigerated",
-        "certification": []
-      },
-      "createdAt": "2024-03-01T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_009",
-      "name": "Frozen Peas",
-      "slug": "green_peas",
-      "category": "frozen-vegetables",
-      "description": "Crisp frozen peas prepared for quick, convenient cooking. Flash-frozen for quality.",
-      "images": [
-        {
-          "url": "/frozen_peas.jpg",
-          "alt": "Frozen Peas - Frozen vegetable"
-        }
-      ],
-      "rating": 4.4,
-      "reviews": 20,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Frozen, -18°C",
-        "certification": ["frozen"]
-      },
-      "createdAt": "2024-02-15T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_010",
-      "name": "Kinazi Cassava Flour",
-      "slug": "kinazi_cassava_flour",
+      "id": "corn_meal_10kg",
+      "name": "Corn Meal 10kg",
+      "slug": "corn_meal_10kg",
       "category": "flours-grains",
-      "description": "Quality cassava flour with a smooth texture for home and professional kitchens.",
+      "description": "Premium quality corn meal in bulk. Ideal for ugali, porridge, and baking needs.",
       "images": [
         {
-          "url": "/kinazi_cassava_flour.jpg",
-          "alt": "Kinazi Cassava Flour - Quality grain"
-        }
-      ],
-      "rating": 4.5,
-      "reviews": 16,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "Rwanda",
-        "storageCondition": "Cool, dry place",
-        "certification": ["gluten-free"]
-      },
-      "createdAt": "2024-02-22T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_011",
-      "name": "Kisubi Tea",
-      "slug": "kisubi_tea",
-      "category": "tea-coffee",
-      "description": "Rich, comforting tea selected for a full-bodied daily cup. Premium blend from East Africa.",
-      "images": [
-        {
-          "url": "/kisubi_tea.jpg",
-          "alt": "Kisubi Tea - Premium tea blend"
-        }
-      ],
-      "rating": 4.6,
-      "reviews": 25,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": ["traditional"]
-      },
-      "createdAt": "2024-01-30T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_012",
-      "name": "Maganjo Maize Flour",
-      "slug": "maganjo_maize_flour",
-      "category": "flours-grains",
-      "description": "Fine maize flour for ugali, porridge, baking, and family meals. Traditional staple.",
-      "images": [
-        {
-          "url": "/maganjo_maize_flour.jpg",
-          "alt": "Maganjo Maize Flour - Traditional grain"
-        }
-      ],
-      "rating": 4.5,
-      "reviews": 29,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "Uganda",
-        "storageCondition": "Cool, dry place",
-        "certification": ["traditional"]
-      },
-      "createdAt": "2024-01-10T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_013",
-      "name": "Millet Karo",
-      "slug": "millet_karo",
-      "category": "flours-grains",
-      "description": "Wholesome millet staple with a naturally nutty flavour. Nutritious and versatile.",
-      "images": [
-        {
-          "url": "/millet_karo.jpg",
-          "alt": "Millet Karo - Nutty grain"
-        }
-      ],
-      "rating": 4.3,
-      "reviews": 14,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": []
-      },
-      "createdAt": "2024-02-28T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_014",
-      "name": "Mochaberry Coffee",
-      "slug": "mochaberry_coffee",
-      "category": "tea-coffee",
-      "description": "A fragrant coffee blend made for a rich, smooth brew. Premium quality beans.",
-      "images": [
-        {
-          "url": "/mochaberry_coffee.jpg",
-          "alt": "Mochaberry Coffee - Premium blend"
-        }
-      ],
-      "rating": 4.8,
-      "reviews": 35,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": ["specialty"]
-      },
-      "createdAt": "2024-01-12T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_015",
-      "name": "Nestle Cerelac",
-      "slug": "nestle_cerelac",
-      "category": "baby-foods",
-      "description": "Convenient nutrition for growing families. Fortified with essential vitamins.",
-      "images": [
-        {
-          "url": "/nestle_cerelac.jpg",
-          "alt": "Nestle Cerelac - Nutritious baby food"
+          "url": "/Corn_Meal_10kg.jpg",
+          "alt": "Corn Meal 10kg - Bulk grain"
         }
       ],
       "rating": 4.6,
@@ -341,182 +42,21 @@
       "specs": {
         "origin": "East Africa",
         "storageCondition": "Cool, dry place",
-        "certification": ["fortified"]
+        "certification": ["quality checked"]
       },
-      "createdAt": "2024-02-05T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
+      "createdAt": "2024-09-02T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
     },
     {
-      "id": "prod_015b",
-      "name": "Nestle Nido",
-      "slug": "nestle_nido",
-      "category": "dry-goods",
-      "description": "Trusted milk powder for households, cafés, and food service.",
-      "images": [
-        {
-          "url": "/nestle_nido.jpg",
-          "alt": "Nestle Nido - Milk powder"
-        }
-      ],
-      "rating": 4.7,
-      "reviews": 26,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": []
-      },
-      "createdAt": "2024-01-25T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_016",
-      "name": "Samaki Sardines",
-      "slug": "samaki_sardines",
-      "category": "canned-fish",
-      "description": "High-quality canned sardines rich in omega-3s. Ready to eat, perfect for quick meals.",
-      "images": [
-        {
-          "url": "/talapia_fish.jpg",
-          "alt": "Samaki Sardines - Canned fish"
-        }
-      ],
-      "rating": 4.4,
-      "reviews": 18,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool storage",
-        "certification": ["omega-rich"]
-      },
-      "createdAt": "2024-03-10T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_017",
-      "name": "Sukuma Wiki (Collard Greens)",
-      "slug": "sukuma_wiki",
-      "category": "frozen-vegetables",
-      "description": "Frozen collard greens, a favourite dark leafy vegetable. Ready to cook.",
-      "images": [
-        {
-          "url": "/sosoma1.jpg",
-          "alt": "Sukuma Wiki - Frozen greens"
-        }
-      ],
-      "rating": 4.5,
-      "reviews": 21,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Frozen, -18°C",
-        "certification": ["frozen"]
-      },
-      "createdAt": "2024-02-18T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_018",
-      "name": "Sunflower Oil",
-      "slug": "sunflower_oil",
-      "category": "oils-fats",
-      "description": "Pure, refined sunflower oil perfect for cooking and frying. Light and versatile.",
-      "images": [
-        {
-          "url": "",
-          "alt": "Sunflower Oil - Cooking oil (Placeholder)"
-        }
-      ],
-      "rating": 4.6,
-      "reviews": 27,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dark place",
-        "certification": []
-      },
-      "createdAt": "2024-01-18T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_019",
-      "name": "Pilipili (Hot Pepper Sauce)",
-      "slug": "pilipili_hot_pepper_sauce",
-      "category": "condiments",
-      "description": "Authentic hot pepper sauce with a kick. Adds heat to any dish.",
-      "images": [
-        {
-          "url": "/salsa.jpg",
-          "alt": "Pilipili - Hot pepper sauce"
-        }
-      ],
-      "rating": 4.7,
-      "reviews": 32,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool storage",
-        "certification": ["traditional"]
-      },
-      "createdAt": "2024-02-25T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_020",
-      "name": "Sorghum Flour",
-      "slug": "sorghum_flour",
+      "id": "corn_meal_2kg",
+      "name": "Corn Meal 2kg",
+      "slug": "corn_meal_2kg",
       "category": "flours-grains",
-      "description": "Nutritious sorghum flour for traditional and modern cooking. Ancient grain staple.",
+      "description": "High-quality corn meal for family cooking and food service preparation.",
       "images": [
         {
-          "url": "",
-          "alt": "Sorghum Flour - Ancient grain (Placeholder)"
-        }
-      ],
-      "rating": 4.3,
-      "reviews": 11,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": ["gluten-free"]
-      },
-      "createdAt": "2024-03-05T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_021",
-      "name": "Royco Mchuzi Mix",
-      "slug": "royco_mchuzi_mix",
-      "category": "spices",
-      "description": "Savory seasoning mix for richer stews, sauces, and everyday cooking.",
-      "images": [
-        {
-          "url": "/royco_mchuzi_mix.jpg",
-          "alt": "Royco Mchuzi Mix - Spices"
-        }
-      ],
-      "rating": 4.4,
-      "reviews": 17,
-      "inventory": "In Inventory",
-      "specs": {
-        "origin": "East Africa",
-        "storageCondition": "Cool, dry place",
-        "certification": []
-      },
-      "createdAt": "2024-02-08T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
-    },
-    {
-      "id": "prod_022",
-      "name": "Githeri Mix (Corn & Beans)",
-      "slug": "githeri_mix",
-      "category": "canned-legumes",
-      "description": "Traditional githeri mix - corn and beans combination. Ready to prepare.",
-      "images": [
-        {
-          "url": "/yellow_corn.jpg",
-          "alt": "Githeri Mix - Traditional blend"
+          "url": "/Corn_Meal_2kg.jpg",
+          "alt": "Corn Meal 2kg - Family pack"
         }
       ],
       "rating": 4.5,
@@ -524,58 +64,1070 @@
       "inventory": "In Inventory",
       "specs": {
         "origin": "East Africa",
-        "storageCondition": "Cool storage",
-        "certification": []
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
       },
-      "createdAt": "2024-01-22T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
+      "createdAt": "2024-09-03T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
     },
     {
-      "id": "prod_023",
-      "name": "Chapati Flour",
-      "slug": "chapati_flour",
+      "id": "corn_meal_5kg",
+      "name": "Corn Meal 5kg",
+      "slug": "corn_meal_5kg",
       "category": "flours-grains",
-      "description": "Specially formulated flour for perfect chapati flatbreads. Easy kneading and rolling.",
+      "description": "Convenient 5kg portion of nutritious corn meal for regular household use.",
       "images": [
         {
-          "url": "",
-          "alt": "Chapati Flour - Flatbread flour (Placeholder)"
+          "url": "/Corn_Meal_5kg.jpg",
+          "alt": "Corn Meal 5kg - Medium pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 20,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-04T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "fermented_sorghum_flour",
+      "name": "Fermented Sorghum Flour",
+      "slug": "fermented_sorghum_flour",
+      "category": "flours-grains",
+      "description": "Traditional fermented sorghum flour with enhanced nutritional value and digestibility.",
+      "images": [
+        {
+          "url": "/Fermented_Sorghum_Flour.jpg",
+          "alt": "Fermented Sorghum Flour - Nutritious grain"
         }
       ],
       "rating": 4.6,
+      "reviews": 21,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-05T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "maize_flour_10kg",
+      "name": "Maize Flour 10kg",
+      "slug": "maize_flour_10kg",
+      "category": "flours-grains",
+      "description": "Bulk maize flour for professional kitchens and large families. Fine, consistent texture.",
+      "images": [
+        {
+          "url": "/Maize_Flour_10kg.jpg",
+          "alt": "Maize Flour 10kg - Professional pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 23,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-06T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "maize_flour_5kg",
+      "name": "Maize Flour 5kg",
+      "slug": "maize_flour_5kg",
+      "category": "flours-grains",
+      "description": "Quality maize flour for ugali, porridge, and traditional meals. Versatile staple.",
+      "images": [
+        {
+          "url": "/Maize_Flour_5kg.jpg",
+          "alt": "Maize Flour 5kg - Medium pack"
+        }
+      ],
+      "rating": 4.5,
       "reviews": 24,
       "inventory": "In Inventory",
       "specs": {
         "origin": "East Africa",
         "storageCondition": "Cool, dry place",
-        "certification": []
+        "certification": ["quality checked"]
       },
-      "createdAt": "2024-02-01T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
+      "createdAt": "2024-09-07T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
     },
     {
-      "id": "prod_024",
-      "name": "Coconut Milk",
-      "slug": "coconut_milk",
-      "category": "canned-dairy",
-      "description": "Rich, creamy coconut milk for curries and traditional dishes. Full-fat quality.",
+      "id": "maize_flour_2kg",
+      "name": "Maize Flour 2kg",
+      "slug": "maize_flour_2kg",
+      "category": "flours-grains",
+      "description": "Small pack maize flour perfect for home baking and everyday cooking needs.",
       "images": [
         {
-          "url": "",
-          "alt": "Coconut Milk - Canned dairy (Placeholder)"
+          "url": "/Maize_Flower_2kg.jpg",
+          "alt": "Maize Flour 2kg - Family pack"
         }
       ],
-      "rating": 4.7,
+      "rating": 4.5,
+      "reviews": 25,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-08T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "millet_flour",
+      "name": "Millet Flour",
+      "slug": "millet_flour",
+      "category": "flours-grains",
+      "description": "Wholesome millet flour with naturally nutty flavor. Gluten-free alternative grain.",
+      "images": [
+        {
+          "url": "/Millet_Flour.jpg",
+          "alt": "Millet Flour - Nutty grain flour"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 26,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-09T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "mixed_porridge_flour",
+      "name": "Mixed Porridge Flour",
+      "slug": "mixed_porridge_flour",
+      "category": "flours-grains",
+      "description": "Multi-grain porridge flour blend for nutritious breakfast and family meals.",
+      "images": [
+        {
+          "url": "/Mixed_Porridge_Flour.jpg",
+          "alt": "Mixed Porridge Flour - Multi-grain blend"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 27,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-10T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "red_sorghum_flour",
+      "name": "Red Sorghum Flour",
+      "slug": "red_sorghum_flour",
+      "category": "flours-grains",
+      "description": "Rich red sorghum flour packed with nutrients and traditional flavor for authentic recipes.",
+      "images": [
+        {
+          "url": "/Red_Sorghum_Flour.jpg",
+          "alt": "Red Sorghum Flour - Nutrient-rich grain"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 28,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-11T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "roasted_peanut_flour",
+      "name": "Roasted Peanut Flour",
+      "slug": "roasted_peanut_flour",
+      "category": "flours-grains",
+      "description": "Delicious roasted peanut flour for baking, sauces, and protein-rich dishes.",
+      "images": [
+        {
+          "url": "/Roasted_Peanut_Flour.jpg",
+          "alt": "Roasted Peanut Flour - Protein-rich flour"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 29,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-12T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "peanut_beans",
+      "name": "Peanut Beans",
+      "slug": "peanut_beans",
+      "category": "legumes-beans",
+      "description": "Protein-rich peanut beans for stews, curries, and traditional legume dishes.",
+      "images": [
+        {
+          "url": "/Peanut_Beans.jpg",
+          "alt": "Peanut Beans - Protein-rich legume"
+        }
+      ],
+      "rating": 4.5,
       "reviews": 30,
       "inventory": "In Inventory",
       "specs": {
         "origin": "East Africa",
-        "storageCondition": "Cool storage",
-        "certification": []
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
       },
-      "createdAt": "2024-01-28T10:30:00Z",
-      "updatedAt": "2024-09-04T10:30:00Z"
+      "createdAt": "2024-09-13T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "red_beans",
+      "name": "Red Beans",
+      "slug": "red_beans",
+      "category": "legumes-beans",
+      "description": "Premium red beans loaded with fiber and nutrients for hearty family meals.",
+      "images": [
+        {
+          "url": "/Red_Beans.jpg",
+          "alt": "Red Beans - Premium legume"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 31,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-14T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "yellow_beans_10kg",
+      "name": "Yellow Beans 10kg",
+      "slug": "yellow_beans_10kg",
+      "category": "legumes-beans",
+      "description": "Bulk yellow beans for restaurants and large-scale cooking operations.",
+      "images": [
+        {
+          "url": "/Yellow_Beans_10kg.jpg",
+          "alt": "Yellow Beans 10kg - Professional pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 32,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-15T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "yellow_beans_2kg",
+      "name": "Yellow Beans 2kg",
+      "slug": "yellow_beans_2kg",
+      "category": "legumes-beans",
+      "description": "Quality yellow beans in convenient 2kg pack for family cooking.",
+      "images": [
+        {
+          "url": "/Yellow_Beans_2kg.jpg",
+          "alt": "Yellow Beans 2kg - Family pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 33,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-16T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "yellow_beans_5kg",
+      "name": "Yellow Beans 5kg",
+      "slug": "yellow_beans_5kg",
+      "category": "legumes-beans",
+      "description": "Mid-sized pack of yellow beans for regular household and food business use.",
+      "images": [
+        {
+          "url": "/Yellow_Beans_5kg.jpg",
+          "alt": "Yellow Beans 5kg - Medium pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 34,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-17T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "tanzania_rice_10kg",
+      "name": "Tanzania Rice 10kg",
+      "slug": "tanzania_rice_10kg",
+      "category": "rice-cereals",
+      "description": "Premium Tanzanian rice in bulk. Perfect for restaurants and large families.",
+      "images": [
+        {
+          "url": "/Tanzania_Rice_10kg.jpg",
+          "alt": "Tanzania Rice 10kg - Professional pack"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 35,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Tanzania",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "tanzania_rice_2kg",
+      "name": "Tanzania Rice 2kg",
+      "slug": "tanzania_rice_2kg",
+      "category": "rice-cereals",
+      "description": "High-quality Tanzanian rice for everyday meals and special occasions.",
+      "images": [
+        {
+          "url": "/Tanzania_Rice_2kg.jpg",
+          "alt": "Tanzania Rice 2kg - Family pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 36,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Tanzania",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "tanzania_rice_5kg",
+      "name": "Tanzania Rice 5kg",
+      "slug": "tanzania_rice_5kg",
+      "category": "rice-cereals",
+      "description": "Mid-sized pack of authentic Tanzanian rice with excellent taste and texture.",
+      "images": [
+        {
+          "url": "/Tanzania_Rice_5kg.jpg",
+          "alt": "Tanzania Rice 5kg - Medium pack"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 37,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "Tanzania",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "roasted_organic_peanuts",
+      "name": "Roasted Organic Peanuts",
+      "slug": "roasted_organic_peanuts",
+      "category": "dry-goods",
+      "description": "Delicious roasted organic peanuts perfect for snacking and cooking.",
+      "images": [
+        {
+          "url": "/Roasted_Organic_Peanuts.jpg",
+          "alt": "Roasted Organic Peanuts - Natural snack"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 38,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "peanut_flour",
+      "name": "Peanut Flour",
+      "slug": "peanut_flour",
+      "category": "dry-goods",
+      "description": "Nutrient-rich peanut flour for sauces, baking, and protein supplementation.",
+      "images": [
+        {
+          "url": "/Peanut_Flour.jpg",
+          "alt": "Peanut Flour - Protein-rich flour"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 39,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "african_black_salt",
+      "name": "African Black Salt",
+      "slug": "african_black_salt",
+      "category": "spices",
+      "description": "Traditional African black salt with rich mineral content for authentic seasoning.",
+      "images": [
+        {
+          "url": "/African_Black_Salt.jpg",
+          "alt": "African Black Salt - Premium spice"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 40,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "green_clay",
+      "name": "Green Clay",
+      "slug": "green_clay",
+      "category": "spices",
+      "description": "Natural green clay for wellness, beauty, and traditional health practices.",
+      "images": [
+        {
+          "url": "/Green_Clay.jpg",
+          "alt": "Green Clay - Natural wellness product"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 41,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "stinging_nettle",
+      "name": "Stinging Nettle",
+      "slug": "stinging_nettle",
+      "category": "spices",
+      "description": "Dried stinging nettle leaves for herbal tea and traditional medicinal use.",
+      "images": [
+        {
+          "url": "/Stinging_Nettle.jpg",
+          "alt": "Stinging Nettle - Medicinal herb"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 42,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "activated_charcoal_powder",
+      "name": "Activated Charcoal Powder",
+      "slug": "activated_charcoal_powder",
+      "category": "spices",
+      "description": "Pure activated charcoal powder for wellness, detoxification, and health benefits.",
+      "images": [
+        {
+          "url": "/Activated_Charcoal_Powder.jpg",
+          "alt": "Activated Charcoal Powder - Wellness product"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 43,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "african_palm_oil_3l",
+      "name": "African Palm Oil 3L",
+      "slug": "african_palm_oil_3l",
+      "category": "oils-fats",
+      "description": "Rich, authentic African palm oil in convenient 3L container for cooking.",
+      "images": [
+        {
+          "url": "/African_Palm_Oil_3L.jpg",
+          "alt": "African Palm Oil 3L - Cooking oil"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 44,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "african_palm_oil_3l_2",
+      "name": "African Palm Oil 3L Premium",
+      "slug": "african_palm_oil_3l_premium",
+      "category": "oils-fats",
+      "description": "Premium quality African palm oil for traditional and contemporary cuisine.",
+      "images": [
+        {
+          "url": "/African_Palm_Oil_3L_2.jpg",
+          "alt": "African Palm Oil 3L Premium - Premium cooking oil"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 45,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "african_palm_oil_5l",
+      "name": "African Palm Oil 5L",
+      "slug": "african_palm_oil_5l",
+      "category": "oils-fats",
+      "description": "Bulk African palm oil in 5L size for restaurants and food businesses.",
+      "images": [
+        {
+          "url": "/African_Palm_Oil_5L.jpg",
+          "alt": "African Palm Oil 5L - Bulk cooking oil"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 46,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "african_palm_oil_5l_2",
+      "name": "African Palm Oil 5L Plus",
+      "slug": "african_palm_oil_5l_plus",
+      "category": "oils-fats",
+      "description": "Extra virgin African palm oil for demanding culinary and commercial applications.",
+      "images": [
+        {
+          "url": "/African_Palm_Oil_5L_2.jpg",
+          "alt": "African Palm Oil 5L Plus - Extra virgin oil"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 47,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dark place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_cassava",
+      "name": "Frozen Cassava",
+      "slug": "frozen_cassava",
+      "category": "frozen-vegetables",
+      "description": "Flash-frozen cassava prepared and ready for convenient cooking.",
+      "images": [
+        {
+          "url": "/Frozen_Cassava.jpg",
+          "alt": "Frozen Cassava - Ready-to-cook vegetable"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 48,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_chopped_pumpkin",
+      "name": "Frozen Chopped Pumpkin",
+      "slug": "frozen_chopped_pumpkin",
+      "category": "frozen-vegetables",
+      "description": "Pre-chopped frozen pumpkin for soups, stews, and traditional vegetable dishes.",
+      "images": [
+        {
+          "url": "/Frozen_Chopped_Pumpkin.jpg",
+          "alt": "Frozen Chopped Pumpkin - Pre-cut vegetable"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 49,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_fresh_beans",
+      "name": "Frozen Fresh Beans",
+      "slug": "frozen_fresh_beans",
+      "category": "frozen-vegetables",
+      "description": "Crisp frozen beans packed with nutrients for quick and easy meal preparation.",
+      "images": [
+        {
+          "url": "/Frozen_Fresh_Beans.jpg",
+          "alt": "Frozen Fresh Beans - Nutritious vegetable"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 50,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_fresh_cooked_maize",
+      "name": "Frozen Fresh Cooked Maize",
+      "slug": "frozen_fresh_cooked_maize",
+      "category": "frozen-vegetables",
+      "description": "Pre-cooked frozen maize ready to heat and serve for convenience.",
+      "images": [
+        {
+          "url": "/Frozen_Fresh_Cooked_Maize.jpg",
+          "alt": "Frozen Fresh Cooked Maize - Ready-to-serve vegetable"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 51,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_green_cassava_leaves",
+      "name": "Frozen Green Cassava Leaves",
+      "slug": "frozen_green_cassava_leaves",
+      "category": "frozen-vegetables",
+      "description": "Nutritious frozen cassava leaves for authentic African cooking and stews.",
+      "images": [
+        {
+          "url": "/Frozen_Green_Cassava_Leaves.jpg",
+          "alt": "Frozen Green Cassava Leaves - Traditional vegetable"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 52,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_green_peas",
+      "name": "Frozen Green Peas",
+      "slug": "frozen_green_peas",
+      "category": "frozen-vegetables",
+      "description": "Tender frozen peas perfect for sides, soups, and mixed vegetable dishes.",
+      "images": [
+        {
+          "url": "/Frozen_Green_Peas.jpg",
+          "alt": "Frozen Green Peas - Tender vegetable"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 53,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_peeled_fresh_banana",
+      "name": "Frozen Peeled Fresh Banana",
+      "slug": "frozen_peeled_fresh_banana",
+      "category": "frozen-vegetables",
+      "description": "Pre-peeled frozen bananas for smoothies, cooking, and convenient use.",
+      "images": [
+        {
+          "url": "/Frozen_Peeled_Fresh_Banana.jpg",
+          "alt": "Frozen Peeled Fresh Banana - Convenient fruit"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 54,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_sweet_potato",
+      "name": "Frozen Sweet Potato",
+      "slug": "frozen_sweet_potato",
+      "category": "frozen-vegetables",
+      "description": "Nutritious frozen sweet potato ready for quick preparation in any meal.",
+      "images": [
+        {
+          "url": "/Frozen_Sweet_Potato.jpg",
+          "alt": "Frozen Sweet Potato - Nutritious vegetable"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 55,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "frozen_yams",
+      "name": "Frozen Yams",
+      "slug": "frozen_yams",
+      "category": "frozen-vegetables",
+      "description": "Quality frozen yams prepared and ready for traditional and modern recipes.",
+      "images": [
+        {
+          "url": "/Frozen_Yams.jpg",
+          "alt": "Frozen Yams - Traditional vegetable"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 56,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Frozen, -18°C",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "salted_tilapia_1kg",
+      "name": "Salted Tilapia 1kg",
+      "slug": "salted_tilapia_1kg",
+      "category": "frozen-canned-fish",
+      "description": "Premium salted tilapia in small pack for family meals and food preparation.",
+      "images": [
+        {
+          "url": "/Salted_Tilapia_1kg.jpg",
+          "alt": "Salted Tilapia 1kg - Premium fish"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 57,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "salted_tilapia_10kg",
+      "name": "Salted Tilapia 10kg",
+      "slug": "salted_tilapia_10kg",
+      "category": "frozen-canned-fish",
+      "description": "Bulk salted tilapia for restaurants, food businesses, and large-scale cooking.",
+      "images": [
+        {
+          "url": "/Salted_Tilapia_10kg.jpg",
+          "alt": "Salted Tilapia 10kg - Bulk fish"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 58,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "smoked_nile_perch",
+      "name": "Smoked Nile Perch",
+      "slug": "smoked_nile_perch",
+      "category": "frozen-canned-fish",
+      "description": "Delicious smoked Nile perch with authentic flavor for traditional dishes.",
+      "images": [
+        {
+          "url": "/Smoked_Nile_Perch.jpg",
+          "alt": "Smoked Nile Perch - Premium fish"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 59,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "smoked_tilapia_10kg",
+      "name": "Smoked Tilapia 10kg",
+      "slug": "smoked_tilapia_10kg",
+      "category": "frozen-canned-fish",
+      "description": "Bulk smoked tilapia for professional kitchens and wholesale operations.",
+      "images": [
+        {
+          "url": "/Smoked_Tilapia_10kg.jpg",
+          "alt": "Smoked Tilapia 10kg - Bulk fish"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 60,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "sun_dried_anchovies",
+      "name": "Sun Dried Anchovies",
+      "slug": "sun_dried_anchovies",
+      "category": "frozen-canned-fish",
+      "description": "Traditional sun-dried anchovies for authentic flavoring and nutritious meals.",
+      "images": [
+        {
+          "url": "/Sun_Dried_Anchovies.jpg",
+          "alt": "Sun Dried Anchovies - Traditional fish"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 61,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "tasty_peanut_butter",
+      "name": "Tasty Peanut Butter",
+      "slug": "tasty_peanut_butter",
+      "category": "dairy-spreads",
+      "description": "Creamy peanut butter for breakfast, snacking, and culinary applications.",
+      "images": [
+        {
+          "url": "/Tasty_Peanut_Butter.jpg",
+          "alt": "Tasty Peanut Butter - Creamy spread"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 62,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dark place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "bee_honey",
+      "name": "Bee Honey",
+      "slug": "bee_honey",
+      "category": "beverages",
+      "description": "Pure natural bee honey for health, sweetening, and traditional remedies.",
+      "images": [
+        {
+          "url": "/Bee_Honey.jpg",
+          "alt": "Bee Honey - Pure natural honey"
+        }
+      ],
+      "rating": 4.7,
+      "reviews": 63,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dark place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "concentrated_passion_juice",
+      "name": "Concentrated Passion Juice",
+      "slug": "concentrated_passion_juice",
+      "category": "beverages",
+      "description": "Rich concentrated passion fruit juice for refreshing drinks and recipes.",
+      "images": [
+        {
+          "url": "/Concerntrated_Passion_Juice.jpg",
+          "alt": "Concentrated Passion Juice - Fruit concentrate"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 64,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool storage",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "chapati",
+      "name": "Chapati",
+      "slug": "chapati",
+      "category": "baking-mixes",
+      "description": "Traditional chapati bread ready to cook for quick family meals.",
+      "images": [
+        {
+          "url": "/Chapati.jpg",
+          "alt": "Chapati - Traditional bread"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 65,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
+    },
+    {
+      "id": "soy_bean_flour",
+      "name": "Soy Bean Flour",
+      "slug": "soy_bean_flour",
+      "category": "specialty",
+      "description": "Nutritious soy bean flour for baking, cooking, and protein enrichment.",
+      "images": [
+        {
+          "url": "/Soy_Bean_Flower.jpg",
+          "alt": "Soy Bean Flour - Protein-rich flour"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 66,
+      "inventory": "In Inventory",
+      "specs": {
+        "origin": "East Africa",
+        "storageCondition": "Cool, dry place",
+        "certification": ["quality checked"]
+      },
+      "createdAt": "2024-09-18T00:00:00Z",
+      "updatedAt": "2024-09-18T00:00:00Z"
     }
   ],
-  "total": 25
+  "total": 49
 }

@@ -16,7 +16,7 @@ export type ProductCategory =
   | "frozen-vegetables"
   | "dairy-spreads"
   | "canned-dairy"
-  | "canned-fish"
+  | "frozen-canned-fish"
   | "canned-legumes"
   | "beverages"
   | "soft-drinks"

@@ -138,7 +138,7 @@ export default function ProductsPage() {
               className="hidden lg:block lg:col-span-1"
               aria-label="Product filters"
             >
-              <div className="bg-white dark:bg-[#1c4030] rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-[#2a5a47] sticky top-4">
+              <div className="bg-white dark:bg-[#1c4030] rounded-lg p-6 space-y-6 border border-neutral-200 dark:border-[#2a8f6d] sticky top-4">
                 {/* Sort */}
                 <div>
                   <label
@@ -153,7 +153,7 @@ export default function ProductsPage() {
                     onChange={(e) =>
                       handleSortChange(e.target.value as SortOption)
                     }
-                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#2a8f6d] rounded-lg bg-neutral-50 dark:bg-[#0d3d2c] text-neutral-900 dark:text-[#c8e6c9] focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="name">Name (A-Z)</option>
                     <option value="rating">Rating (High to Low)</option>
@@ -175,7 +175,7 @@ export default function ProductsPage() {
                     placeholder="Search by name, origin..."
                     value={searchQuery}
                     onChange={(e) => handleSearchChange(e.target.value)}
-                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#1f633f] rounded-lg bg-neutral-50 dark:bg-[#1f633f] text-neutral-900 dark:text-[#f8f2e5] placeholder-neutral-500 dark:placeholder-[#b8d58e]/50 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-neutral-300 dark:border-[#2a8f6d] rounded-lg bg-neutral-50 dark:bg-[#0d3d2c] text-neutral-900 dark:text-[#c8e6c9] placeholder-neutral-500 dark:placeholder-[#7fb89d]/60 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     aria-describedby="search-help"
                   />
                   <p id="search-help" className="sr-only">
@@ -195,7 +195,7 @@ export default function ProductsPage() {
                         className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
                           selectedCategory === null
                             ? "bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 font-medium"
-                            : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                            : "text-neutral-700 dark:text-[#a8d5b8] hover:bg-neutral-100 dark:hover:bg-[#1f633f]"
                         }`}
                         aria-pressed={selectedCategory === null}
                       >
@@ -208,7 +208,7 @@ export default function ProductsPage() {
                           className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
                             selectedCategory === cat.slug
                               ? "bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 font-medium"
-                              : "text-neutral-700 dark:text-[#b8d58e] hover:bg-neutral-100 dark:hover:bg-[#1f633f]"
+                              : "text-neutral-700 dark:text-[#a8d5b8] hover:bg-neutral-100 dark:hover:bg-[#1f633f]"
                           }`}
                           aria-pressed={selectedCategory === cat.slug}
                         >
@@ -223,8 +223,8 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Results Count */}
-                <div className="pt-4 border-t border-neutral-200 dark:border-[#2a5a47]">
-                  <p className="text-xs text-neutral-600 dark:text-[#b8d58e]">
+                <div className="pt-4 border-t border-neutral-200 dark:border-[#2a8f6d]">
+                  <p className="text-xs text-neutral-600 dark:text-[#a8d5b8]">
                     Showing{" "}
                     <span className="font-semibold">
                       {paginatedProducts.length}
@@ -239,8 +239,8 @@ export default function ProductsPage() {
             {/* Products Grid */}
             <div className="lg:col-span-3" id="products-section">
               {sorted.length === 0 ? (
-                <div className="bg-white dark:bg-[#1c4030] rounded-lg p-12 text-center border border-neutral-200 dark:border-[#2a5a47]">
-                  <p className="text-neutral-600 dark:text-[#b8d58e] mb-4">
+                <div className="bg-white dark:bg-[#1c4030] rounded-lg p-12 text-center border border-neutral-200 dark:border-[#2a8f6d]">
+                  <p className="text-neutral-600 dark:text-[#a8d5b8] mb-4">
                     No products found matching your criteria.
                   </p>
                   <button
@@ -266,50 +266,60 @@ export default function ProductsPage() {
                       <Link
                         key={product.id}
                         href={`/products/${product.slug}`}
-                        className="group flex flex-col h-full bg-white dark:bg-[#1c4030] hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-[#2a5a47] focus-within:ring-2 focus-within:ring-primary-500"
+                        className="group flex flex-col h-full bg-white dark:bg-[#0d3d2c] hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-[#0a2d1f]/50 transition-shadow rounded-lg overflow-hidden border border-neutral-200 dark:border-[#2a8f6d] focus-within:ring-2 focus-within:ring-primary-500"
                         aria-label={`View ${product.name} details`}
                       >
                         {/* Product Image */}
-                        <div className="relative w-full aspect-square bg-neutral-100 dark:bg-[#1f633f] flex items-center justify-center p-6 overflow-hidden">
+                        <div className="relative w-full aspect-4/3 bg-neutral-100 dark:bg-[#1f6d4a] overflow-hidden">
                           <Image
                             src={
                               product.images[0]?.url ||
                               "/eastafricawholesalefoodsLogo.png"
                             }
                             alt={product.images[0]?.alt || product.name}
-                            width={200}
-                            height={200}
-                            className="object-contain group-hover:scale-105 transition-transform duration-300"
+                            fill
+                            className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            loading="lazy"
                           />
                         </div>
 
                         {/* Product Info */}
-                        <div className="p-5 flex-1 flex flex-col">
-                          <h3 className="font-bold text-lg text-neutral-900 dark:text-[#f8f2e5] mb-2 line-clamp-2">
+                        <div className="p-4 flex-1 flex flex-col">
+                          <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-2">
+                            {categories.find((c) => c.slug === product.category)
+                              ?.name || product.category.replace(/-/g, " ")}
+                          </p>
+
+                          <h3 className="font-semibold text-neutral-900 dark:text-[#e8f5e9] mb-2 line-clamp-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                             {product.name}
                           </h3>
 
-                          <p className="text-sm text-neutral-600 dark:text-[#b8d58e] mb-4 line-clamp-2 flex-1">
+                          <p className="text-sm text-neutral-600 dark:text-[#a8d5b8] mb-3 line-clamp-2 flex-1">
                             {product.description}
                           </p>
 
-                          {/* Rating */}
-                          {product.rating && (
-                            <div className="flex items-center gap-2 mb-4">
-                              <span className="text-yellow-400 text-sm">
-                                {"★".repeat(Math.round(product.rating))}
-                                {"☆".repeat(5 - Math.round(product.rating))}
+                          {/* Rating & Reviews */}
+                          <div className="flex items-center justify-between text-xs mb-3">
+                            <div className="flex items-center gap-1">
+                              <span
+                                className="text-primary-600 dark:text-primary-400"
+                                aria-label={`Rating: ${product.rating || 0} out of 5`}
+                              >
+                                {"★".repeat(Math.round(product.rating || 0))}
+                                {"☆".repeat(
+                                  5 - Math.round(product.rating || 0),
+                                )}
                               </span>
-                              <span className="text-xs text-neutral-600 dark:text-[#b8d58e]">
-                                {product.rating.toFixed(1)} (
-                                {product.reviews || 0})
+                              <span className="text-neutral-600 dark:text-[#7fb89d]">
+                                ({product.reviews || 0})
                               </span>
                             </div>
-                          )}
+                          </div>
 
-                          {/* View Details Button */}
+                          {/* Inventory Badge */}
                           <button
-                            className="w-full bg-green-800 hover:bg-orange-700 dark:bg-green-800 dark:hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition-colors"
+                            className="w-full bg-green-800 hover:bg-green-900 dark:bg-green-800 dark:hover:bg-green-900 text-white font-bold py-2 px-4 rounded transition-colors"
                             aria-label={`View ${product.name} details`}
                           >
                             View Details
