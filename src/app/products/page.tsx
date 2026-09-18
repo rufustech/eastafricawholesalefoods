@@ -165,7 +165,7 @@ export default function ProductsPage() {
                 <div>
                   <label
                     htmlFor="product-search"
-                    className="block text-sm font-semibold mb-2 text-neutral-900 dark:text-neutral-100"
+                    className="block text-sm font-semibold mb-2 text-neutral-800 dark:text-neutral-100"
                   >
                     Search Products
                   </label>
