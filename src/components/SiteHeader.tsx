@@ -50,6 +50,12 @@ export function SiteHeader() {
             About
           </Link>
           <Link
+            href="/contact"
+            className="transition-colors hover:text-[#d64b35]"
+          >
+            Contact
+          </Link>
+          <Link
             href="/#story"
             className="transition-colors hover:text-[#d64b35]"
           >

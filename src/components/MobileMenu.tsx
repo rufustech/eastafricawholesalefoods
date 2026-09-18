@@ -33,6 +33,7 @@ export function MobileMenu({ onLinkClick }: MobileMenuProps) {
     { label: "Categories", href: "/#categories" },
     { label: "Featured", href: "/#featured" },
     { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
     { label: "Our Story", href: "/#story" },
     { label: "Shop Wholesale", href: "/products" },
   ];

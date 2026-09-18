@@ -47,12 +47,9 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="mailto:info@eastafricawholesalefoods.com"
-                  className={linkClass}
-                >
+                <Link href="/contact" className={linkClass}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
