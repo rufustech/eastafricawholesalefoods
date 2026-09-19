@@ -14,7 +14,11 @@ export function ConstructionGate({ children }: { children: React.ReactNode }) {
   const configuredPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD?.trim();
 
   useEffect(() => {
-    setUnlocked(sessionStorage.getItem(ACCESS_KEY) === "true");
+    // TODO: Re-enable password protection during maintenance mode
+    // For now, automatically grant access to launch the site
+    setUnlocked(true);
+    // Original password check (disabled):
+    // setUnlocked(sessionStorage.getItem(ACCESS_KEY) === "true");
   }, []);
 
   if (unlocked) return <>{children}</>;
@@ -51,12 +55,53 @@ export function ConstructionGate({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div onPointerDown={!promptVisible ? revealPrompt : undefined} onKeyDown={handleKeyDown} role={!promptVisible ? "button" : undefined} tabIndex={!promptVisible ? 0 : undefined}>
+    <div
+      onPointerDown={!promptVisible ? revealPrompt : undefined}
+      onKeyDown={handleKeyDown}
+      role={!promptVisible ? "button" : undefined}
+      tabIndex={!promptVisible ? 0 : undefined}
+    >
       <BrandSpinner>
-        <div className="mt-8 w-[min(90vw,360px)] text-center" onPointerDown={(event) => event.stopPropagation()}>
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#e8846f]">Website under construction</p>
-          <p className="mt-3 text-sm text-[#d8e7c9]">Coming soon. Touch or click to continue.</p>
-          {promptVisible && <form onSubmit={handleSubmit} className="mt-6 space-y-3 text-left"><label htmlFor="admin-password" className="block text-xs font-bold uppercase tracking-widest text-[#b8d58e]">Admin password</label><input id="admin-password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} autoFocus required className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-[#f8f2e5] outline-none placeholder:text-white/40 focus:border-[#b8d58e]" placeholder="Enter password" /><button type="submit" disabled={isSubmitting} className="w-full rounded-full bg-[#d64b35] px-6 py-3 font-bold text-white transition-colors hover:bg-[#b83d2b] disabled:opacity-60">{isSubmitting ? "Checking..." : "Enter website"}</button>{error && <p className="text-center text-sm text-[#f5b3a6]">{error}</p>}</form>}
+        <div
+          className="mt-8 w-[min(90vw,360px)] text-center"
+          onPointerDown={(event) => event.stopPropagation()}
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#e8846f]">
+            Website under construction
+          </p>
+          <p className="mt-3 text-sm text-[#d8e7c9]">
+            Coming soon. Touch or click to continue.
+          </p>
+          {promptVisible && (
+            <form onSubmit={handleSubmit} className="mt-6 space-y-3 text-left">
+              <label
+                htmlFor="admin-password"
+                className="block text-xs font-bold uppercase tracking-widest text-[#b8d58e]"
+              >
+                Admin password
+              </label>
+              <input
+                id="admin-password"
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                autoFocus
+                required
+                className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-[#f8f2e5] outline-none placeholder:text-white/40 focus:border-[#b8d58e]"
+                placeholder="Enter password"
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full rounded-full bg-[#d64b35] px-6 py-3 font-bold text-white transition-colors hover:bg-[#b83d2b] disabled:opacity-60"
+              >
+                {isSubmitting ? "Checking..." : "Enter website"}
+              </button>
+              {error && (
+                <p className="text-center text-sm text-[#f5b3a6]">{error}</p>
+              )}
+            </form>
+          )}
         </div>
       </BrandSpinner>
     </div>

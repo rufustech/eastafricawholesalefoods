@@ -9,6 +9,18 @@ interface ReviewsSectionProps {
 export function ReviewsSection({ product }: ReviewsSectionProps) {
   const reviewCount = product.reviews ?? 0;
 
+  // TODO: Re-enable this section when customer reviews are available
+  // For now, showing "No reviews yet" message to prevent fake reviews
+  return (
+    <div className="py-8 border-t border-neutral-200">
+      <h3 className="text-lg font-semibold mb-4">Reviews</h3>
+      <p className="text-neutral-600">
+        No reviews yet. Be the first to review this product!
+      </p>
+    </div>
+  );
+
+  /* DISABLED - Real reviews section below. Uncomment to re-enable.
   if (!product.rating || reviewCount === 0) {
     return (
       <div className="py-8 border-t border-neutral-200">
@@ -29,7 +41,7 @@ export function ReviewsSection({ product }: ReviewsSectionProps) {
     <div className="py-8 border-t border-neutral-200">
       <h3 className="text-lg font-semibold mb-6">Customer Reviews</h3>
 
-      {/* Rating Summary */}
+      Rating Summary
       <div className="flex flex-col md:flex-row gap-8 mb-8 pb-8 border-b border-neutral-200">
         <div className="shrink-0">
           <div className="text-4xl font-bold text-neutral-900 mb-2">
@@ -41,7 +53,7 @@ export function ReviewsSection({ product }: ReviewsSectionProps) {
           </p>
         </div>
 
-        {/* Rating Breakdown */}
+        Rating Breakdown
         <div className="flex-1 space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
             <div key={rating} className="flex items-center gap-3">
@@ -62,11 +74,11 @@ export function ReviewsSection({ product }: ReviewsSectionProps) {
         </div>
       </div>
 
-      {/* Individual Reviews */}
+      Individual Reviews
       <div className="space-y-6">
         <h4 className="font-semibold text-neutral-900">Most Helpful Reviews</h4>
 
-        {/* Sample Reviews */}
+        Sample Reviews
         {[1, 2, 3].map((i) => (
           <div
             key={i}
@@ -116,8 +128,9 @@ export function ReviewsSection({ product }: ReviewsSectionProps) {
         ))}
       </div>
 
-      {/* Write Review CTA */}
+      Write Review CTA
       <button className="btn btn-secondary mt-8">Write a Review</button>
     </div>
   );
+  */
 }
