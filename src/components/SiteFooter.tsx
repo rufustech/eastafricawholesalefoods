@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BUSINESS, FORMATTED_ADDRESS } from "@/lib/site";
 
 const linkClass = "text-white transition-colors hover:text-gray-200";
 
@@ -8,15 +9,26 @@ export function SiteFooter() {
     <footer className="site-footer bg-green-900 py-12 text-white">
       <div className="container">
         <div className="grid grid-cols-1 gap-10 text-center md:text-left md:grid-cols-4 md:gap-8">
-          <div className="flex justify-center md:block">
+          <div className="flex flex-col items-center gap-4 md:items-start">
             <Image
               src="/eastafricawholesalefoodsLogo.png"
-              alt="East Africa Wholesale Foods"
+              alt="East Africa Wholesale Foods logo"
               width={240}
               height={96}
               quality={100}
               className="h-auto w-60 object-contain"
             />
+            <address className="text-sm not-italic text-white/80">
+              {FORMATTED_ADDRESS}
+              <br />
+              <a href={`tel:${BUSINESS.phoneE164}`} className={linkClass}>
+                {BUSINESS.phone}
+              </a>
+              <br />
+              <a href={`mailto:${BUSINESS.email}`} className={linkClass}>
+                {BUSINESS.email}
+              </a>
+            </address>
           </div>
           <div>
             <h2 className="mb-4 font-bold">Shop</h2>
@@ -27,13 +39,13 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/products" className={linkClass}>
-                  New Arrivals
+                <Link href="/categories" className={linkClass}>
+                  Categories
                 </Link>
               </li>
               <li>
-                <Link href="/products" className={linkClass}>
-                  Sale Items
+                <Link href="/wholesale" className={linkClass}>
+                  Wholesale
                 </Link>
               </li>
             </ul>
@@ -47,6 +59,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/distribution" className={linkClass}>
+                  Distribution
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className={linkClass}>
                   Contact
                 </Link>
@@ -54,22 +71,21 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h2 className="mb-4 font-bold">Support</h2>
+            <h2 className="mb-4 font-bold">Get in touch</h2>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="mailto:info@eastafricawholesalefoods.com"
-                  className={linkClass}
-                >
-                  Shipping Info
+                <a href={`tel:${BUSINESS.phoneE164}`} className={linkClass}>
+                  Call {BUSINESS.phone}
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:info@eastafricawholesalefoods.com"
-                  className={linkClass}
-                >
-                  Returns
+                <a href={BUSINESS.whatsapp} className={linkClass}>
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${BUSINESS.email}`} className={linkClass}>
+                  Email us
                 </a>
               </li>
             </ul>

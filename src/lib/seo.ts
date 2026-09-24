@@ -1,39 +1,52 @@
 /**
  * SEO Utilities - Schema.org JSON-LD Generators
- * Generate structured data for search engines
+ * Generate structured data for search engines.
+ *
+ * NOTE: We never emit fabricated data (reviews, ratings, prices, GTIN, SKU,
+ * stock levels, certifications). Product schema only includes fields we can
+ * verify from the catalogue.
  */
 
 import { Product } from "@/types/product";
+import { BUSINESS, SITE_URL, absoluteUrl, FORMATTED_ADDRESS } from "@/lib/site";
 
 export interface JsonLdSchema {
   "@context": string;
   "@type": string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 /**
- * Generate Product schema for a single product
+ * Generate Product schema for a single product.
+ * Only verifiable fields are included — no reviews/ratings/prices are emitted.
  */
-export function generateProductSchema(product: Product): JsonLdSchema {
-  return {
+export function generateProductSchema(
+  product: Product,
+  options?: { url?: string; categoryName?: string },
+): JsonLdSchema {
+  const schema: JsonLdSchema = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: product.images.map((img) => img.url),
-    aggregateRating:
-      product.rating && product.reviews
-        ? {
-            "@type": "AggregateRating",
-            ratingValue: product.rating.toString(),
-            reviewCount: product.reviews.toString(),
-          }
-        : undefined,
+    image: product.images.map((img) => absoluteUrl(img.url)),
+    category: options?.categoryName,
+    url: options?.url,
+    brand: {
+      "@type": "Brand",
+      name: BUSINESS.name,
+    },
   };
+
+  if (product.specs?.origin) {
+    schema.countryOfOrigin = product.specs.origin;
+  }
+
+  return schema;
 }
 
 /**
- * Generate BreadcrumbList schema for navigation
+ * Generate BreadcrumbList schema for navigation.
  */
 export function generateBreadcrumbSchema(
   breadcrumbs: Array<{ name: string; url: string }>,
@@ -45,64 +58,100 @@ export function generateBreadcrumbSchema(
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: item.url.startsWith("http") ? item.url : absoluteUrl(item.url),
     })),
   };
 }
 
 /**
- * Generate Organization schema
+ * Generate an ItemList schema for a category/listing page.
  */
-export function generateOrganizationSchema(config: {
-  name: string;
-  url: string;
-  logo?: string;
-  email?: string;
-  phone?: string;
-}): JsonLdSchema {
+export function generateItemListSchema(
+  items: Array<{ name: string; url: string }>,
+): JsonLdSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url.startsWith("http") ? item.url : absoluteUrl(item.url),
+    })),
+  };
+}
+
+/**
+ * Generate Organization schema.
+ */
+export function generateOrganizationSchema(): JsonLdSchema {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: config.name,
-    url: config.url,
-    logo: config.logo,
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Service",
-      email: config.email,
-      telephone: config.phone,
-    },
-  };
-}
-
-/**
- * Generate LocalBusiness schema for regional operations
- */
-export function generateLocalBusinessSchema(config: {
-  name: string;
-  description: string;
-  address: string;
-  region: string;
-  phone: string;
-  email: string;
-}): JsonLdSchema {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: config.name,
-    description: config.description,
+    name: BUSINESS.name,
+    legalName: BUSINESS.legalName,
+    url: SITE_URL,
+    logo: absoluteUrl(BUSINESS.logo),
+    email: BUSINESS.email,
+    telephone: BUSINESS.phoneE164,
     address: {
       "@type": "PostalAddress",
-      streetAddress: config.address,
-      addressRegion: config.region,
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.city,
+      addressRegion: BUSINESS.address.region,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.country,
     },
-    telephone: config.phone,
-    email: config.email,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: BUSINESS.email,
+      telephone: BUSINESS.phoneE164,
+      areaServed: "CA",
+      availableLanguage: "en",
+    },
   };
 }
 
 /**
- * Generate FAQPage schema
+ * Generate LocalBusiness schema for the verified Edmonton location.
+ */
+export function generateLocalBusinessSchema(): JsonLdSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "@id": `${SITE_URL}/#localbusiness`,
+    name: BUSINESS.name,
+    description: BUSINESS.description,
+    url: SITE_URL,
+    image: absoluteUrl(BUSINESS.logo),
+    logo: absoluteUrl(BUSINESS.logo),
+    telephone: BUSINESS.phoneE164,
+    email: BUSINESS.email,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.city,
+      addressRegion: BUSINESS.address.region,
+      postalCode: BUSINESS.address.postalCode,
+      addressCountry: BUSINESS.address.country,
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Canada",
+    },
+    openingHoursSpecification: BUSINESS.openingHours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.days,
+      opens: h.opens,
+      closes: h.closes,
+    })),
+  };
+}
+
+/**
+ * Generate FAQPage schema.
  */
 export function generateFaqSchema(
   faqs: Array<{ question: string; answer: string }>,
@@ -122,31 +171,27 @@ export function generateFaqSchema(
 }
 
 /**
- * Generate Website schema with SearchAction
+ * Generate Website schema. Search action omitted (no dedicated search route).
  */
-export function generateWebsiteSchema(config: {
-  name: string;
-  url: string;
-}): JsonLdSchema {
+export function generateWebsiteSchema(): JsonLdSchema {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: config.name,
-    url: config.url,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${config.url}/search?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
+    name: BUSINESS.name,
+    url: SITE_URL,
+    inLanguage: "en",
+    publisher: {
+      "@type": "Organization",
+      name: BUSINESS.name,
     },
   };
 }
 
 /**
- * Sanitize JSON-LD schema by removing undefined values
+ * Sanitize JSON-LD schema by removing undefined values.
  */
 export function sanitizeSchema(schema: JsonLdSchema): JsonLdSchema {
   return JSON.parse(JSON.stringify(schema));
 }
+
+export { FORMATTED_ADDRESS };

@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { categories } from "@/data/categories";
+import { getActiveCategories } from "@/lib/catalog";
 import { SiteHeader } from "@/components/SiteHeader";
+
+const categories = getActiveCategories();
 
 export default function CategoriesPage() {
   return (
@@ -43,7 +45,7 @@ export default function CategoriesPage() {
           {categories.map((category, index) => (
             <Link
               key={category.id}
-              href={`/products?category=${category.slug}`}
+              href={`/products/category/${category.slug}`}
               className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 p-6 transition-all hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-lg dark:hover:shadow-primary-900/20"
             >
               <span className="absolute -right-5 -top-10 font-serif text-[8rem] font-bold leading-none text-neutral-900/5 dark:text-white/5">

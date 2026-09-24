@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { StructuredData } from "@/components/seo/StructuredData";
-import { generateWebsiteSchema, generateOrganizationSchema } from "@/lib/seo";
+import {
+  generateWebsiteSchema,
+  generateOrganizationSchema,
+  generateLocalBusinessSchema,
+} from "@/lib/seo";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { ConstructionGate } from "@/components/ConstructionGate";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ScrollRevealEffects } from "@/components/ScrollRevealEffects";
+import { GtmHead, GtmNoScript, GA4 } from "@/components/analytics/Analytics";
+import { SITE_URL, BUSINESS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "East Africa Wholesale Foods - Premium Quality Products",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default:
+      "African Food Wholesaler & Distributor Canada | East Africa Wholesale Foods",
+    template: "%s | East Africa Wholesale Foods",
+  },
   description:
-    "Premium wholesale foods supplier serving East Africa. High-quality dry foods, grains, frozen products, and spices from Kenya, Uganda, and Tanzania.",
-  keywords: [
-    "wholesale foods",
-    "East Africa",
-    "wholesale supplier",
-    "dry foods",
-    "frozen foods",
-    "wholesale prices",
-  ],
-  authors: [{ name: "East Africa Wholesale Foods" }],
-  creator: "East Africa Wholesale Foods",
-  publisher: "East Africa Wholesale Foods",
+    "East Africa Wholesale Foods is an Edmonton-based African food wholesaler and distributor supplying grocery stores, retailers, restaurants and food-service businesses across Canada.",
+  applicationName: BUSINESS.name,
+  authors: [{ name: BUSINESS.name }],
+  creator: BUSINESS.name,
+  publisher: BUSINESS.name,
+  alternates: {
+    canonical: "/",
+  },
   formatDetection: {
     telephone: true,
     email: true,
@@ -29,19 +36,29 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://eastafricawholesalefoods.com",
-    siteName: "East Africa Wholesale Foods",
-    title: "East Africa Wholesale Foods - Premium Quality Products",
-    description: "Premium wholesale foods supplier serving East Africa",
+    locale: "en_CA",
+    url: SITE_URL,
+    siteName: BUSINESS.name,
+    title:
+      "African Food Wholesaler & Distributor Canada | East Africa Wholesale Foods",
+    description:
+      "Edmonton-based African food wholesaler and distributor supplying retailers, grocery stores, restaurants and food-service businesses across Canada.",
     images: [
       {
-        url: "https://eastafricawholesalefoods.com/og-image.jpg",
+        url: "/eastafricawholesalefoodsLogo.png",
         width: 1200,
         height: 630,
         alt: "East Africa Wholesale Foods",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "African Food Wholesaler & Distributor Canada | East Africa Wholesale Foods",
+    description:
+      "Edmonton-based African food wholesaler and distributor supplying retailers, restaurants and food businesses across Canada.",
+    images: ["/eastafricawholesalefoodsLogo.png"],
   },
   robots: {
     index: true,
@@ -54,10 +71,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
-  },
 };
 
 export default function RootLayout({
@@ -65,17 +78,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const websiteSchema = generateWebsiteSchema({
-    name: "East Africa Wholesale Foods",
-    url: "https://eastafricawholesalefoods.com",
-  });
-
-  const organizationSchema = generateOrganizationSchema({
-    name: "East Africa Wholesale Foods",
-    url: "https://eastafricawholesalefoods.com",
-    email: "info@eastafricawholesalefoods.com",
-    phone: "+254-XXX-XXX-XXX",
-  });
+  const websiteSchema = generateWebsiteSchema();
+  const organizationSchema = generateOrganizationSchema();
+  const localBusinessSchema = generateLocalBusinessSchema();
 
   return (
     <html
@@ -86,22 +91,15 @@ export default function RootLayout({
     >
       <head>
         {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NDFMNF29');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
+        <GtmHead />
 
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="theme-color" content="#1f633f" />
         <link rel="icon" href="/favicon.ico" />
-        <StructuredData schema={[websiteSchema, organizationSchema]} />
+        <StructuredData
+          schema={[websiteSchema, organizationSchema, localBusinessSchema]}
+        />
 
         {/* Apply dark mode BEFORE rendering starts */}
         <script
@@ -123,33 +121,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
 
-        {/* Google Analytics - Update GA4_ID with your actual Google Analytics 4 ID */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YOUR_GA4_ID', { page_path: window.location.pathname });
-            `,
-          }}
-        />
+        {/* Google Analytics 4 — loads only when NEXT_PUBLIC_GA4_ID is set */}
+        <GA4 />
       </head>
       <body className="min-h-screen bg-[#f8f2e5] text-[#173b2b] dark:bg-[#0f2a1d] dark:text-[#f8f2e5]">
         {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NDFMNF29"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        <GtmNoScript />
 
         <ThemeProvider>
           <ConstructionGate>

@@ -1,22 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { categories } from "@/data/categories";
+import { getActiveCategories } from "@/lib/catalog";
 import { fetchProducts } from "@/lib/api/products";
 import { Product } from "@/types/product";
 import { SiteHeader } from "@/components/SiteHeader";
 import { BrandSpinner } from "@/components/BrandSpinner";
 import { Pagination } from "@/components/products/Pagination";
 import { CategoryScroll } from "@/components/products/CategoryScroll";
+import { analytics } from "@/lib/analytics";
+
+const categories = getActiveCategories();
 
 type SortOption = "name" | "rating" | "newest";
 
 const ITEMS_PER_PAGE = 12;
 
 export default function ProductsPage() {
+  return (
+    <Suspense fallback={<BrandSpinner />}>
+      <ProductsPageInner />
+    </Suspense>
+  );
+}
+
+function ProductsPageInner() {
   const searchParams = useSearchParams();
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -106,6 +117,9 @@ export default function ProductsPage() {
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
     setCurrentPage(1);
+    if (query.trim().length > 2) {
+      analytics.searchProducts(query.trim());
+    }
   };
 
   const handleSortChange = (sort: SortOption) => {

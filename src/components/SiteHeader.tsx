@@ -32,16 +32,22 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
           <Link
-            href="/#categories"
+            href="/products"
+            className="transition-colors hover:text-[#d64b35]"
+          >
+            Products
+          </Link>
+          <Link
+            href="/categories"
             className="transition-colors hover:text-[#d64b35]"
           >
             Categories
           </Link>
           <Link
-            href="/#featured"
+            href="/wholesale"
             className="transition-colors hover:text-[#d64b35]"
           >
-            Featured
+            Wholesale
           </Link>
           <Link
             href="/about"

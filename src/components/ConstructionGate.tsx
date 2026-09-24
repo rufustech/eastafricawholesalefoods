@@ -66,12 +66,6 @@ export function ConstructionGate({ children }: { children: React.ReactNode }) {
           className="mt-8 w-[min(90vw,360px)] text-center"
           onPointerDown={(event) => event.stopPropagation()}
         >
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#e8846f]">
-            Website under construction
-          </p>
-          <p className="mt-3 text-sm text-[#d8e7c9]">
-            Coming soon. Touch or click to continue.
-          </p>
           {promptVisible && (
             <form onSubmit={handleSubmit} className="mt-6 space-y-3 text-left">
               <label

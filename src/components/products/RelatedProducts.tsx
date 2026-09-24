@@ -54,30 +54,9 @@ export function RelatedProducts({ products, limit = 4 }: RelatedProductsProps) {
                 {product.description}
               </p>
 
-              {/* Rating & Origin */}
-              <div className="flex items-center justify-between text-xs mb-3">
-                <div className="flex items-center gap-1">
-                  <span
-                    className="text-primary-600 dark:text-primary-400"
-                    aria-label={`Rating: ${product.rating || 0} out of 5`}
-                  >
-                    {"★".repeat(Math.round(product.rating || 0))}
-                    {"☆".repeat(5 - Math.round(product.rating || 0))}
-                  </span>
-                  <span className="text-neutral-600 dark:text-neutral-400">
-                    ({product.reviews || 0})
-                  </span>
-                </div>
-              </div>
-
-              {/* Inventory Badge */}
-              <div className="inline-flex">
-                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
-                  {typeof product.inventory === "string"
-                    ? product.inventory
-                    : `${product.inventory.available ?? 0} units`}
-                </span>
-              </div>
+              <span className="mt-auto text-sm font-bold text-primary-600 dark:text-primary-400">
+                View details →
+              </span>
             </div>
           </Link>
         ))}
